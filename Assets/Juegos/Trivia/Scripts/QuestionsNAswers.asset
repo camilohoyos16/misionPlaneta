@@ -1,0 +1,277 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094fd77f975298d4dba2d39b68a73211, type: 3}
+  m_Name: QuestionsNAswers
+  m_EditorClassIdentifier: 
+  data:
+  - question: "\xBFCu\xE1l es el principal contaminante de la atm\xF3sfera?"
+    answers:
+    - isCorrect: 1
+      answer: "CO2 (di\xF3xido de carbono)."
+    - isCorrect: 0
+      answer: "Ox\xEDgeno."
+    - isCorrect: 0
+      answer: Aerosoles.
+  - question: "\xBFCu\xE1nta energ\xEDa puedes ahorrar utilizando un bombillo de bajo
+      consumo?"
+    answers:
+    - isCorrect: 1
+      answer: Hasta un 80%.
+    - isCorrect: 0
+      answer: 20%.
+    - isCorrect: 0
+      answer: Hasta un 50%.
+  - question: "\xBFQu\xE9 podemos hacer para reducir el impacto del efecto invernadero?"
+    answers:
+    - isCorrect: 1
+      answer: "Sembrar m\xE1s \xE1rboles."
+    - isCorrect: 0
+      answer: "Reutilizar el pl\xE1stico."
+    - isCorrect: 0
+      answer: "Usar protector solar dos veces al d\xEDa."
+  - question: "\xBFCu\xE1les de los siguientes objetos se puede reciclar?"
+    answers:
+    - isCorrect: 1
+      answer: "Botella de pl\xE1stico."
+    - isCorrect: 0
+      answer: Icopor.
+    - isCorrect: 0
+      answer: Botella de vidrio.
+  - question: "\xBFCu\xE1ndo es el d\xEDa mundial del medio ambiente?"
+    answers:
+    - isCorrect: 1
+      answer: 5 de junio.
+    - isCorrect: 0
+      answer: 2 de agosto.
+    - isCorrect: 0
+      answer: 16 de noviembre.
+  - question: "\xBFCu\xE1l de los siguientes agentes emite mayor cantidad de contaminantes?"
+    answers:
+    - isCorrect: 1
+      answer: Fabricas industriales.
+    - isCorrect: 0
+      answer: "Veh\xEDculos."
+    - isCorrect: 0
+      answer: Hogares.
+  - question: "\xBFCu\xE1les de estos elementos hacen parte del medio ambiente?"
+    answers:
+    - isCorrect: 1
+      answer: "Animales, r\xEDos y selvas."
+    - isCorrect: 0
+      answer: Gobierno, empresas e iglesias.
+    - isCorrect: 0
+      answer: Jardines, parques y centros comerciales.
+  - question: "\xBFQu\xE9 es el reciclaje?"
+    answers:
+    - isCorrect: 1
+      answer: Proceso de tratamiento parcial o total que se le hace a un material
+        para obtener una nueva materia prima o producto.
+    - isCorrect: 0
+      answer: Proceso de convertir un objeto utilizado a nuevo.
+    - isCorrect: 0
+      answer: Donar pertenencias a personas menos favorecidas.
+  - question: "\xBFCu\xE1l es parque y reserva natural m\xE1s importante del pa\xEDs?"
+    answers:
+    - isCorrect: 1
+      answer: Parque Nacional Natural el Cocuy.
+    - isCorrect: 0
+      answer: Parque Nacional Tayrona.
+    - isCorrect: 0
+      answer: "El parque del Caf\xE9."
+  - question: "\xBFQu\xE9 tipo de iluminaci\xF3n es la m\xE1s eficiente y ayuda a
+      ahorrar m\xE1s energ\xEDa?"
+    answers:
+    - isCorrect: 1
+      answer: LED.
+    - isCorrect: 0
+      answer: Fluorescente.
+    - isCorrect: 0
+      answer: Incandescente.
+  - question: "\xBFCu\xE1les de las siguientes, son fuentes alternativa de energ\xEDa?"
+    answers:
+    - isCorrect: 1
+      answer: "E\xF3lica, h\xEDdrica y solar."
+    - isCorrect: 0
+      answer: Nuclear, solar y auditiva.
+    - isCorrect: 0
+      answer: Represas, molinos y tractores.
+  - question: "\xBFQu\xE9 puedes hacer con el papel que te sobre?"
+    answers:
+    - isCorrect: 1
+      answer: Reciclarlo.
+    - isCorrect: 0
+      answer: Botarlo.
+    - isCorrect: 0
+      answer: Guardarlo.
+  - question: "\xBFCu\xE1l es la importancia de un material biodegradable?"
+    answers:
+    - isCorrect: 1
+      answer: Sus componentes pueden reintegrarse nuevamente a la tierra sin afectar
+        a los seres vivos.
+    - isCorrect: 0
+      answer: Ayuda a las plantas a crecer.
+    - isCorrect: 0
+      answer: Su material se puede reutilizar.
+  - question: "\xBFCu\xE1l de los siguientes materiales es ecol\xF3gico?"
+    answers:
+    - isCorrect: 1
+      answer: Bolsa de papel.
+    - isCorrect: 0
+      answer: Icopor.
+    - isCorrect: 0
+      answer: Acetato.
+  - question: "\xBFCu\xE1les son los tipos de contaminaci\xF3n?"
+    answers:
+    - isCorrect: 1
+      answer: "Ambiental, auditiva, visual, lum\xEDnica."
+    - isCorrect: 0
+      answer: "Olfativa, t\xE1ctil, visual, gustativa."
+    - isCorrect: 0
+      answer: "Desperdicios, basuras, pesticidas, qu\xEDmicos."
+  - question: "\xBFQu\xE9 beneficios trae el ahorro de energ\xEDa?"
+    answers:
+    - isCorrect: 1
+      answer: "Reducci\xF3n del calentamiento global y ahorro de costos en los servicios
+        de electricidad."
+    - isCorrect: 0
+      answer: Prestigio.
+    - isCorrect: 0
+      answer: "Mayor duraci\xF3n de los electrodom\xE9sticos. "
+  - question: "\xBFEl Arawuana, es un pez de agua dulce que se puede encontrar en
+      Vichada, con gran capacidad para saltar y capturar su presa \xBFsabes qu\xE9
+      tama\xF1o puede alcanzar?"
+    answers:
+    - isCorrect: 1
+      answer: "120 cent\xEDmetros."
+    - isCorrect: 0
+      answer: "10 cent\xEDmetros."
+    - isCorrect: 0
+      answer: 2 metros.
+  - question: "El delf\xEDn rosado es uno de los animales m\xE1s inteligente del planeta,
+      \xE9stos, suelen estar acompa\xF1ados de\u2026"
+    answers:
+    - isCorrect: 1
+      answer: "Su cr\xEDa."
+    - isCorrect: 0
+      answer: "Su n\xFAcleo familiar."
+    - isCorrect: 0
+      answer: Su cardumen.
+  - question: "\xBFCu\xE1l de los siguiente rios, desemboca en el R\xEDo Orinoco?"
+    answers:
+    - isCorrect: 1
+      answer: "R\xEDo Meta."
+    - isCorrect: 0
+      answer: Rio Nilo.
+    - isCorrect: 0
+      answer: "R\xEDo Aburr\xE1."
+  - question: "\xBFCu\xE1l es el tercer r\xEDo m\xE1s caudaloso del mundo?"
+    answers:
+    - isCorrect: 1
+      answer: "R\xEDo Orinoco."
+    - isCorrect: 0
+      answer: "R\xEDo Magdalena."
+    - isCorrect: 0
+      answer: "R\xEDo Amazonas."
+  - question: "\xBFCu\xE1l de estas especies puedes encontrar en el R\xEDo Orinoco?"
+    answers:
+    - isCorrect: 1
+      answer: "Cocodrilos, pira\xF1as y anacondas."
+    - isCorrect: 0
+      answer: "Ballena jorobada, bagre y salm\xF3n."
+    - isCorrect: 0
+      answer: "Zarig\xFCeya."
+  - question: "La especie Cachicama pertenece a la familia de los\u2026"
+    answers:
+    - isCorrect: 1
+      answer: Armadillos.
+    - isCorrect: 0
+      answer: Caimanes.
+    - isCorrect: 0
+      answer: Anfibios.
+  - question: "Este invertebrado, que habita en selva h\xFAmeda y tiene una longitud
+      de hasta 9 metros es conocida como\u2026"
+    answers:
+    - isCorrect: 1
+      answer: "Anaconda o g\xFCio."
+    - isCorrect: 0
+      answer: Cascabel.
+    - isCorrect: 0
+      answer: "Pit\xF3n."
+  - question: "\xBFEn cu\xE1l de los siguientes parques se puede encontrar hasta cinco
+      especies de monos?"
+    answers:
+    - isCorrect: 1
+      answer: Parque Nacional Natural el Tuparro.
+    - isCorrect: 0
+      answer: Parque Nacional Natural Tayrona.
+    - isCorrect: 0
+      answer: Panaca.
+  - question: "\xBFA cu\xE1l de los siguientes r\xEDos, se le considera \u201CLa nueva
+      joya de la orinoqu\xEDa colombiana\u201D?"
+    answers:
+    - isCorrect: 1
+      answer: "R\xEDo Bita."
+    - isCorrect: 0
+      answer: "R\xEDo Magdalena."
+    - isCorrect: 0
+      answer: "R\xEDo Cauca."
+  - question: "El Zamuro, es un ave rapaz que habita en la orinoqu\xEDa colombiana,
+      y se alimenta de\u2026"
+    answers:
+    - isCorrect: 1
+      answer: "Basura y carro\xF1a."
+    - isCorrect: 0
+      answer: Perros y hamburguesas.
+    - isCorrect: 0
+      answer: Insectos.
+  - question: "Los cuatro r\xEDos m\xE1s importantes de Vichada, son\u2026"
+    answers:
+    - isCorrect: 1
+      answer: Meta, Vichada, Guaviare y Tomo.
+    - isCorrect: 0
+      answer: "Cauca, Piedras, T\xE1mesis y Atrato."
+    - isCorrect: 0
+      answer: "Putumayo, Caquet\xE1, Arauca y Sin\xFA."
+  - question: "Vichada, y en general la regi\xF3n Orinoqu\xEDa, es considerada un
+      h\xE1bitat\u2026"
+    answers:
+    - isCorrect: 1
+      answer: "Selv\xE1tica/Llanura."
+    - isCorrect: 0
+      answer: Rural/Urbana.
+    - isCorrect: 0
+      answer: "Escarpada/\xC1rida."
+  - question: "La Guacamaya Real, es una de las aves m\xE1s llamativas de la regi\xF3n
+      Orinoqu\xEDa, esta habita\u2026"
+    answers:
+    - isCorrect: 1
+      answer: Selvas y bosques.
+    - isCorrect: 0
+      answer: "Zool\xF3gicos y fincas."
+    - isCorrect: 0
+      answer: "Monta\xF1as y cumbres."
+  - question: "El Corocoro Rojo, es un ave de hasta 61cm de largo que suele estar
+      acompa\xF1ado de\u2026"
+    answers:
+    - isCorrect: 1
+      answer: Su bandada.
+    - isCorrect: 0
+      answer: Su cardumen.
+    - isCorrect: 0
+      answer: Su manada.
+  - question: "\xBFCu\xE1l es la empresa que suministra la energ\xEDa en tu ciudad?"
+    answers:
+    - isCorrect: 1
+      answer: ElectroVichada.
+    - isCorrect: 0
+      answer: Empresas Varias de Vichada.
+    - isCorrect: 0
+      answer: "Servicios P\xFAblicos de Vichada."
