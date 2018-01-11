@@ -41,3 +41,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1486526515
+    locked: 0
+  - name: StreetLevel1
+    uniqueID: 2016359937
+    locked: 0
+  - name: CarsLevel1
+    uniqueID: 2701930155
+    locked: 0
+  - name: StreetLevel2
+    uniqueID: 1748993193
+    locked: 0
+  - name: CarsLevel2
+    uniqueID: 532115075
+    locked: 0
+  - name: StreetLevel3
+    uniqueID: 2199734653
+    locked: 0
+  - name: CarsLevel3
+    uniqueID: 4039643183
+    locked: 0

@@ -7,7 +7,9 @@ public class Lights : MonoBehaviour {
 
 	[SerializeField] private float minTime;
 	[SerializeField] private float maxTime;
+	[SerializeField] private int amountOfScore;
 	private float timeToTurnOn;
+
 
 
 	[Header("")]
@@ -36,6 +38,7 @@ public class Lights : MonoBehaviour {
 	IEnumerator TurnOnLight()
 	{
 		yield return new WaitForSeconds (timeToTurnOn);
+		EnergyGameManager.Instance.PlusLghTurnOn ();
 		c_image.color = onColor;
 		isOn = true;
 		c_button.interactable = true;
@@ -50,6 +53,7 @@ public class Lights : MonoBehaviour {
 
 	public void OnLightClick()
 	{
+		EnergyGameManager.Instance.PlusScore (amountOfScore);
 		c_image.color = offColor;
 		isOn = false;
 		c_button.interactable = false;

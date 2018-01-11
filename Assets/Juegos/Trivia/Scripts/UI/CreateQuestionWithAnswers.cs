@@ -1,5 +1,4 @@
-﻿
-	using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +9,11 @@ public class CreateQuestionWithAnswers : MonoBehaviour {
 	[SerializeField] private GameObject answersParents;
 	[SerializeField] private GameObject buttonPrefab;
 	[SerializeField] private int howManyButtons;
+	[Header ("BackgroundSettings")]
+	[SerializeField] private Image backGround;
+	[SerializeField] private Sprite energyBackgorund;
+	[SerializeField] private Sprite localBackgorund;
+	[SerializeField] private Sprite environmentBackgorund;
 
 	private int indexButtonCreated;
 	private List<int> indexOfAnswersUsed = new List<int>();
@@ -48,20 +52,29 @@ public class CreateQuestionWithAnswers : MonoBehaviour {
 				int randomIndex = Random.Range (0, indexesToUse.Count);
 				int randomNumber = indexesToUse[randomIndex];
 				indexesToUse.RemoveAt (randomIndex);
-				/*if (indexOfAnswersUsed.Count != 0) {
-					for (int checkAnswerIndex = 0; checkAnswerIndex < indexOfAnswersUsed.Count; checkAnswerIndex++) {
-						if (randomNumber == indexOfAnswersUsed [checkAnswerIndex])
-							randomNumber = Random.Range (0, 3);
-					}
-				}*/
 
 				button.GetComponentInChildren<Text> ().text = QuestionsCreator.questionsChoosed [indexButtonCreated].answers [randomNumber].answer;
 				button.GetComponent<ButtonSelect> ().isCorrect = QuestionsCreator.questionsChoosed [indexButtonCreated].answers [randomNumber].isCorrect;
-
+				ChangeBackgorund(QuestionsCreator.questionsChoosed [indexButtonCreated].answerType);
 				button.onClick.AddListener (() => ScoreManager.instance.CheckAnswer (button.GetComponent<ButtonSelect> ().isCorrect));
 				button.onClick.AddListener (() => AddButtons ());
 			}
 			indexButtonCreated++;
+		}
+	}
+
+	private void ChangeBackgorund(TypeOfAnswer answerType)
+	{
+		switch (answerType) {
+		case TypeOfAnswer.energy:
+			backGround.sprite = energyBackgorund;
+			break;
+		case TypeOfAnswer.environment:
+			backGround.sprite = environmentBackgorund;
+			break;
+		case TypeOfAnswer.local:
+			backGround.sprite = localBackgorund;
+			break;
 		}
 	}
 
