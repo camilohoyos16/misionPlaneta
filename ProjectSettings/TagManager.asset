@@ -50,15 +50,24 @@ TagManager:
   - name: CarsLevel1
     uniqueID: 2701930155
     locked: 0
+  - name: PropsLevel1
+    uniqueID: 1286839041
+    locked: 0
   - name: StreetLevel2
     uniqueID: 1748993193
     locked: 0
   - name: CarsLevel2
     uniqueID: 532115075
     locked: 0
+  - name: PropsLevel2
+    uniqueID: 4293272833
+    locked: 0
   - name: StreetLevel3
     uniqueID: 2199734653
     locked: 0
   - name: CarsLevel3
     uniqueID: 4039643183
+    locked: 0
+  - name: PropsLevel3
+    uniqueID: 4288874629
     locked: 0

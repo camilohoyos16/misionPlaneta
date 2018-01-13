@@ -12,10 +12,12 @@ public class VehicleMovement : MonoBehaviour {
 	private Vector2 movementVector;
 	private int score;
 	private Rigidbody2D c_rigidBody;
+	private Animator c_vehicleAnimator;
 
 	// Use this for initialization
 	void Start () {
 		c_rigidBody = GetComponent<Rigidbody2D> ();
+		c_vehicleAnimator = GetComponentInChildren<Animator> ();
 		AssignScoreValue ();
 		AssignMovementVector ();
 	}
@@ -32,17 +34,19 @@ public class VehicleMovement : MonoBehaviour {
 
 	void OnMouseDown()
 	{
+		c_vehicleAnimator.SetTrigger ("isFixed");
+		GetComponent<BoxCollider2D> ().enabled = false;
 		VehiclesGameManager.Instance.PlusScore (score);
 	}
 
 	private void AssignScoreValue()
 	{
 		switch (typeOfVehicle) {
-		case Vehicles.car:
-			score = 2;
-			break;
 		case Vehicles.motorcycle:
 			score = 1;
+			break;
+		case Vehicles.car:
+			score = 2;
 			break;
 		case Vehicles.truck:
 			score = 3;
@@ -60,6 +64,8 @@ public class VehicleMovement : MonoBehaviour {
 			break;
 		case Direction.left:
 			movementVector = movement + (Vector2.left * speedOfMovement);
+			Vector3 newScale = new Vector3 (-1,transform.localScale.y, transform.localScale.z);
+			transform.localScale = newScale;
 			break;
 		case Direction.right:
 			movementVector = movement + (Vector2.right * speedOfMovement);
