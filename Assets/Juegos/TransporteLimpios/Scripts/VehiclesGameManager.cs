@@ -20,7 +20,15 @@ public class VehiclesGameManager : MonoBehaviour {
 	private static VehiclesGameManager instance;
 	public static VehiclesGameManager Instance{ get { return instance; } }
 
+	public delegate void GameStats();
+	public event GameStats onGameStart;
+	public event GameStats onGameOver;
+
 	public static int globalScore;
+	public float gameTime;
+	public static float timer;
+	public bool isPlaying;
+	public static int amountOfVehiclesFixed;
 
 	void Awake()
 	{
@@ -29,6 +37,8 @@ public class VehiclesGameManager : MonoBehaviour {
 		} else {
 			Destroy (gameObject);
 		}
+
+		timer = 0;
 	}
 
 	// Use this for initialization
@@ -37,13 +47,33 @@ public class VehiclesGameManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update () 
+	{
+		if (isPlaying) {
+			timer += Time.deltaTime;
+			if (timer >= gameTime) {
+				isPlaying = false;
+				if (onGameOver != null) {
+					onGameOver();
+				}
+			}
+		}
 	}
+
+	public void OnGameStart()
+	{
+		if (onGameStart != null) {
+			onGameStart ();
+			isPlaying = true;
+		}
+	}
+		
 
 	public void PlusScore(int score)
 	{
-		globalScore += score;
-		print (globalScore);
+		if (isPlaying) {
+			amountOfVehiclesFixed++;
+			globalScore += score;
+		}
 	}
 }

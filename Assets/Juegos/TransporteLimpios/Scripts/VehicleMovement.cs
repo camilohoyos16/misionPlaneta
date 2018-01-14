@@ -6,18 +6,20 @@ using UnityEngine;
 public class VehicleMovement : MonoBehaviour {
 
 	[SerializeField] public Direction directionOfMovement;
-	[SerializeField] private float speedOfMovement;
+	public float speedOfMovement;
 	[SerializeField] private Vehicles typeOfVehicle;
-
+	[SerializeField] private GameObject fixedVehicle;
 	private Vector2 movementVector;
 	private int score;
 	private Rigidbody2D c_rigidBody;
 	private Animator c_vehicleAnimator;
+	public string vehicleLayer;
 
 	// Use this for initialization
 	void Start () {
 		c_rigidBody = GetComponent<Rigidbody2D> ();
 		c_vehicleAnimator = GetComponentInChildren<Animator> ();
+		GetComponentInChildren<SpriteRenderer> ().sortingLayerName = vehicleLayer;
 		AssignScoreValue ();
 		AssignMovementVector ();
 	}
@@ -36,6 +38,7 @@ public class VehicleMovement : MonoBehaviour {
 	{
 		c_vehicleAnimator.SetTrigger ("isFixed");
 		GetComponent<BoxCollider2D> ().enabled = false;
+		Instantiate (fixedVehicle, transform.position + Vector3.up*1, fixedVehicle.transform.rotation);
 		VehiclesGameManager.Instance.PlusScore (score);
 	}
 
@@ -64,7 +67,7 @@ public class VehicleMovement : MonoBehaviour {
 			break;
 		case Direction.left:
 			movementVector = movement + (Vector2.left * speedOfMovement);
-			Vector3 newScale = new Vector3 (-1,transform.localScale.y, transform.localScale.z);
+			Vector3 newScale = new Vector3 (-1, transform.localScale.y, transform.localScale.z);
 			transform.localScale = newScale;
 			break;
 		case Direction.right:
@@ -74,5 +77,9 @@ public class VehicleMovement : MonoBehaviour {
 			movementVector = movement + (Vector2.up * speedOfMovement);
 			break;
 		}
+	}
+
+	private void ChangeSpriteLayer()
+	{
 	}
 }

@@ -6,4 +6,6 @@ public class SpawnPointInformation : MonoBehaviour {
 
 	public Direction spawnDirection;
 	public bool isAvailable;
+	public float speed;
+	public string vehicleLayer;
 }

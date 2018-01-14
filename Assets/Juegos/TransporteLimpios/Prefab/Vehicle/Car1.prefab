@@ -148,8 +148,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionOfMovement: 0
-  speedOfMovement: 2
+  speedOfMovement: 4.5
   typeOfVehicle: 1
+  fixedVehicle: {fileID: 1952873659851802, guid: 2f6db42dd1f2b924d935a2903deaa0f5,
+    type: 2}
 --- !u!114 &114246698765961458
 MonoBehaviour:
   m_ObjectHideFlags: 1

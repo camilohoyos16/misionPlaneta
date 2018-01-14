@@ -159,8 +159,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionOfMovement: 1
-  speedOfMovement: 2
+  speedOfMovement: 2.7
   typeOfVehicle: 0
+  fixedVehicle: {fileID: 1952873659851802, guid: 2f6db42dd1f2b924d935a2903deaa0f5,
+    type: 2}
 --- !u!212 &212936717838393182
 SpriteRenderer:
   m_ObjectHideFlags: 1

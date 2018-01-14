@@ -68,6 +68,9 @@ TagManager:
   - name: CarsLevel3
     uniqueID: 4039643183
     locked: 0
+  - name: CarsLevel4
+    uniqueID: 1188746953
+    locked: 0
   - name: PropsLevel3
     uniqueID: 4288874629
     locked: 0

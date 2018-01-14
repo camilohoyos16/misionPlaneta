@@ -147,9 +147,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2a485fd895b7c42a2f82ec5ef5d43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directionOfMovement: 1
-  speedOfMovement: 2
+  directionOfMovement: 0
+  speedOfMovement: 3
   typeOfVehicle: 2
+  fixedVehicle: {fileID: 1952873659851802, guid: 2f6db42dd1f2b924d935a2903deaa0f5,
+    type: 2}
 --- !u!114 &114404597457491128
 MonoBehaviour:
   m_ObjectHideFlags: 1

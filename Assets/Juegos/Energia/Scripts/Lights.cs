@@ -19,14 +19,15 @@ public class Lights : MonoBehaviour {
 
 	private Image c_image;
 	private bool isOn;
+	private bool turnOnFirstTime;
 	// Use this for initialization
 	void Start () {
+		turnOnFirstTime = false;
 		isOn = false;
 		c_button = GetComponent<Button> ();
 		c_button.interactable = false;
 		c_image = GetComponent<Image> ();
 		c_image.color = offColor;
-		StartTurnOnAgain ();
 	}
 	
 	// Update is called once per frame
@@ -42,11 +43,21 @@ public class Lights : MonoBehaviour {
 		c_image.color = onColor;
 		isOn = true;
 		c_button.interactable = true;
+
+		if (!turnOnFirstTime) 
+		{
+			turnOnFirstTime = true;
+			EnergyGameManager.Instance.ControlFirstTurnOn ();
+		}
 	}
 
-	private void StartTurnOnAgain()
+	public void StartTurnOnAgain()
 	{
 		timeToTurnOn = Random.Range (minTime, maxTime);
+		if (!turnOnFirstTime) 
+		{
+			timeToTurnOn = minTime;
+		}
 		turnOnLight = TurnOnLight ();
 		StartCoroutine (turnOnLight);
 	}

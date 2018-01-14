@@ -7,17 +7,21 @@ public class SpawnVehicles : MonoBehaviour {
 	[SerializeField] private GameObject[] vehiclesPrefabs;
 	[SerializeField] private SpawnPointInformation[] spawnPoint;
 
+	void OnEnable()
+	{
+	}
+
+	void OnDisable()
+	{
+		VehiclesGameManager.Instance.onGameStart -= Spawning;
+	}
+
 	// Use this for initialization
 	void Start () {
+		VehiclesGameManager.Instance.onGameStart += Spawning;
 		for (int i = 0; i < spawnPoint.Length; i++) {
 			spawnPoint [i].isAvailable = true;
 		}
-		Spawning ();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
 	private void Spawning()
@@ -42,8 +46,9 @@ public class SpawnVehicles : MonoBehaviour {
 		spawnPoint [randomPoint].isAvailable = false;
 		currentVehiculToSpawn.GetComponent<VehicleMovement> ().directionOfMovement = spawnPoint[randomPoint].spawnDirection;
 
+		currentVehiculToSpawn.GetComponent<VehicleMovement> ().speedOfMovement = spawnPoint [randomPoint].speed;
+		currentVehiculToSpawn.GetComponent<VehicleMovement> ().vehicleLayer = spawnPoint [randomPoint].vehicleLayer;
 		Instantiate (currentVehiculToSpawn, spawnPoint [randomPoint].transform.position, transform.rotation);
-
 		StartCoroutine (ActiveSpawnPoint(spawnPoint [randomPoint]));
 		StartCoroutine (CallToSpawn ());
 	}
@@ -65,7 +70,7 @@ public class SpawnVehicles : MonoBehaviour {
 
 	IEnumerator ActiveSpawnPoint(SpawnPointInformation spawnPoint)
 	{
-		yield return new WaitForSeconds (3);
+		yield return new WaitForSeconds (1f);
 		spawnPoint.isAvailable = true;
 	}
 }
