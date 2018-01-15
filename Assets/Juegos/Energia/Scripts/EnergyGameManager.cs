@@ -14,7 +14,7 @@ public class EnergyGameManager : MonoBehaviour {
 	public static int globalScore;
 	public static int amountOfLightTurnOff;
 	public static int amountOfLightTurnOn;
-
+	public EnergyUIManager energyUI;
 	public float gameTime;
 	public static float timer;
 	public bool isPlaying;
@@ -59,9 +59,12 @@ public class EnergyGameManager : MonoBehaviour {
 
 	public void PlusScore(int score)
 	{
-		amountOfLightTurnOff ++;
-		print ("TurnOff: " + amountOfLightTurnOff);
-		globalScore += score;
+		if (isPlaying) {
+			energyUI.UpdateBatteryCharge ();
+			amountOfLightTurnOff++;
+			print ("TurnOff: " + amountOfLightTurnOff);
+			globalScore += score;
+		}
 	}
 
 	public void ControlFirstTurnOn(){
@@ -75,8 +78,9 @@ public class EnergyGameManager : MonoBehaviour {
 	{
 		if (onGameStart != null) {
 			onGameStart ();
-			isPlaying = true;
 		}
+		isPlaying = true;
+		ControlFirstTurnOn ();
 	}
 
 	public void PlusLghTurnOn()

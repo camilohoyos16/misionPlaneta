@@ -4,4 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/Menu.unity
+    guid: c7f7e256cfd629441b02f407afa4e5cf
+  - enabled: 1
+    path: Assets/_Scenes/Energia.unity
+    guid: 0c12205b879458c48b085ea4b1da1aa7
+  - enabled: 1
+    path: Assets/_Scenes/Tips.unity
+    guid: ff782382ad1737a4b96a136989e90e8a
+  - enabled: 1
+    path: Assets/_Scenes/TransporteLimpios.unity
+    guid: 9d7e1f2581ae1db4d8cca3fbc93039e3
+  - enabled: 1
+    path: Assets/_Scenes/Trivia.unity
+    guid: 2972560d3b00bca44b7001d9047ba39f

@@ -18,6 +18,9 @@ public class ScoreManager : MonoBehaviour {
 	[SerializeField] private GameObject level3;
 	[SerializeField] private GameObject level4;
 
+	[Header ("Tutorial Manager")]
+	[SerializeField] private GameObject tutorial;
+		
 	private bool gameIsFinished;
 
 	void OnEnable()
@@ -32,11 +35,15 @@ public class ScoreManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		tutorial.SetActive (true);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+	}
+	public void OnDissapearTutorial()
+	{
+		tutorial.SetActive (false);
 	}
 
 	public void CheckAnswer(bool isCorrect)

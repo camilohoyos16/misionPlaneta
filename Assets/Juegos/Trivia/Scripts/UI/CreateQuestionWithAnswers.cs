@@ -53,7 +53,7 @@ public class CreateQuestionWithAnswers : MonoBehaviour {
 				int randomNumber = indexesToUse[randomIndex];
 				indexesToUse.RemoveAt (randomIndex);
 
-				button.GetComponentInChildren<Text> ().text = QuestionsCreator.questionsChoosed [indexButtonCreated].answers [randomNumber].answer;
+				button.GetComponentInChildren<Text> ().text = string .Format("-{0}",QuestionsCreator.questionsChoosed [indexButtonCreated].answers [randomNumber].answer);
 				button.GetComponent<ButtonSelect> ().isCorrect = QuestionsCreator.questionsChoosed [indexButtonCreated].answers [randomNumber].isCorrect;
 				ChangeBackgorund(QuestionsCreator.questionsChoosed [indexButtonCreated].answerType);
 				button.onClick.AddListener (() => ScoreManager.instance.CheckAnswer (button.GetComponent<ButtonSelect> ().isCorrect));
