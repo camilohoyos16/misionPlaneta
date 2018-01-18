@@ -15,6 +15,8 @@ public class VehicleMovement : MonoBehaviour {
 	private Animator c_vehicleAnimator;
 	public string vehicleLayer;
 	public int isFixed;
+	public GameObject needToFixedImage;
+	public GameObject needToFixedImage2;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +24,8 @@ public class VehicleMovement : MonoBehaviour {
 		c_rigidBody = GetComponent<Rigidbody2D> ();
 		c_vehicleAnimator = GetComponentInChildren<Animator> ();
 		GetComponentInChildren<SpriteRenderer> ().sortingLayerName = vehicleLayer;
+		needToFixedImage.GetComponent<SpriteRenderer> ().sortingLayerName = vehicleLayer;
+		needToFixedImage2.GetComponent<SpriteRenderer> ().sortingLayerName = vehicleLayer;
 		AssignScoreValue ();
 		AssignMovementVector ();
 		if (isFixed == 1)
@@ -42,6 +46,7 @@ public class VehicleMovement : MonoBehaviour {
 	{
 		c_vehicleAnimator.SetTrigger ("isFixed");
 		GetComponent<BoxCollider2D> ().enabled = false;
+		needToFixedImage.SetActive (false);
 		if (isFixed == 0) {
 			Instantiate (fixedVehicle, transform.position + Vector3.up * 1, fixedVehicle.transform.rotation);
 			VehiclesGameManager.Instance.PlusScore (score);

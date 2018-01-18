@@ -53,7 +53,7 @@ public class SceneController : MonoBehaviour {
 
 	public void RemoveScene()
 	{
-		SceneManager.UnloadSceneAsync (SceneManager.GetSceneAt (1));
+		SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt (1));
 		if (onUnload != null)
 			onUnload ();
 	}

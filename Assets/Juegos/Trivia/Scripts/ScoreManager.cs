@@ -17,6 +17,7 @@ public class ScoreManager : MonoBehaviour {
 	[SerializeField] private GameObject level2;
 	[SerializeField] private GameObject level3;
 	[SerializeField] private GameObject level4;
+	[SerializeField] private GameObject buttonsFinal;
 
 	[Header ("Tutorial Manager")]
 	[SerializeField] private GameObject tutorial;
@@ -59,6 +60,7 @@ public class ScoreManager : MonoBehaviour {
 
 	private void RankedPlayer()
 	{
+		buttonsFinal.SetActive (true);
 		switch (score) {
 		case 1:
 		case 2:

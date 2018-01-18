@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnVehicles : MonoBehaviour {
 
@@ -9,10 +10,12 @@ public class SpawnVehicles : MonoBehaviour {
 
 	void OnEnable()
 	{
+		VehiclesGameManager.Instance.onGameOver += DisableSpawnPoints;
 	}
 
 	void OnDisable()
 	{
+		VehiclesGameManager.Instance.onGameOver -= DisableSpawnPoints;
 		VehiclesGameManager.Instance.onGameStart -= Spawning;
 	}
 
@@ -21,6 +24,13 @@ public class SpawnVehicles : MonoBehaviour {
 		VehiclesGameManager.Instance.onGameStart += Spawning;
 		for (int i = 0; i < spawnPoint.Length; i++) {
 			spawnPoint [i].isAvailable = true;
+		}
+	}
+
+	void DisableSpawnPoints()
+	{
+		for (int i = 0; i < spawnPoint.Length; i++) {
+			spawnPoint [i].isAvailable = false;
 		}
 	}
 
@@ -50,6 +60,7 @@ public class SpawnVehicles : MonoBehaviour {
 		VehicleMovement car = Instantiate (currentVehiculToSpawn, spawnPoint [randomPoint].transform.position, transform.rotation);
 		VehiclesGameManager.totalVehiclesGameobjects.Add (car.gameObject);
 		car.gameObject.SetActive (true);
+
 		StartCoroutine (ActiveSpawnPoint(spawnPoint [randomPoint]));
 		StartCoroutine (CallToSpawn ());
 	}
@@ -71,7 +82,7 @@ public class SpawnVehicles : MonoBehaviour {
 
 	IEnumerator ActiveSpawnPoint(SpawnPointInformation spawnPoint)
 	{
-		yield return new WaitForSeconds (1f);
+		yield return new WaitForSeconds (1.5f); 
 		spawnPoint.isAvailable = true;
 	}
 }

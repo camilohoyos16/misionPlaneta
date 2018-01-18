@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour {
 	[Header("Tutorial elements")]
 	[SerializeField] private GameObject tutorial;
 	[SerializeField] private int tutorialTime;
+	[SerializeField] private PopUpsController popup;
 
 	void OnEnable()
 	{
@@ -30,8 +31,6 @@ public class UIManager : MonoBehaviour {
 		VehiclesGameManager.Instance.onGameOver += GameOver;
 		tutorial.SetActive (true);
 		gameOver.SetActive (false);
-		dissapearTutorial = DissapearTutorial ();
-		StartCoroutine (dissapearTutorial);
 	}
 	
 	// Update is called once per frame
@@ -39,21 +38,10 @@ public class UIManager : MonoBehaviour {
 		
 	}
 
-	IEnumerator dissapearTutorial;
-	IEnumerator DissapearTutorial()
-	{
-		yield return new WaitForSeconds (tutorialTime);
-		tutorial.SetActive (false);
-		VehiclesGameManager.Instance.OnGameStart ();
-		dissapearTutorial = null;
-	}
-
 	public void OnClickDissapearTutorial()
 	{
-		if (dissapearTutorial != null)
-			StopCoroutine (dissapearTutorial);
 		tutorial.SetActive (false);
-		VehiclesGameManager.Instance.OnGameStart ();
+		popup.OnStartPopUps ();
 	}
 
 	private void GameOver()
