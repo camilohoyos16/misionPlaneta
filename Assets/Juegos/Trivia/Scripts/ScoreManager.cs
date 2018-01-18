@@ -23,6 +23,10 @@ public class ScoreManager : MonoBehaviour {
 	[SerializeField] private GameObject tutorial;
 		
 	private bool gameIsFinished;
+	[Header ("Sound")]
+	[SerializeField] private AudioSource c_audioLisener;
+	[SerializeField] private AudioClip correctAnswer;
+	[SerializeField] private AudioClip wrongAnswer;
 
 	void OnEnable()
 	{
@@ -52,7 +56,13 @@ public class ScoreManager : MonoBehaviour {
 		howManyAnswered++;
 		if (isCorrect) {
 			score++;
+			c_audioLisener.clip = correctAnswer;
+			c_audioLisener.time = 0f;
+		} else {
+			c_audioLisener.clip = wrongAnswer;
+			c_audioLisener.time = 1f;
 		}
+		c_audioLisener.Play ();
 		if (howManyAnswered == 10)
 			RankedPlayer ();
 		print (score);
