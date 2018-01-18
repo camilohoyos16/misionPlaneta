@@ -29,6 +29,7 @@ public class VehiclesGameManager : MonoBehaviour {
 	public static float timer;
 	public bool isPlaying;
 	public static int amountOfVehiclesFixed;
+	public static List<GameObject> totalVehiclesGameobjects = new List<GameObject>();
 
 	void Awake()
 	{
@@ -37,8 +38,19 @@ public class VehiclesGameManager : MonoBehaviour {
 		} else {
 			Destroy (gameObject);
 		}
+	}
 
+	void OnDisable()
+	{
+		globalScore = 0;
 		timer = 0;
+		amountOfVehiclesFixed = 0;
+		for (int i = 0; i < totalVehiclesGameobjects.Count; i++) {
+			GameObject currentVehicle= totalVehiclesGameobjects [0];
+			currentVehicle.SetActive (false);
+			totalVehiclesGameobjects.Remove(currentVehicle);
+			Destroy (currentVehicle);
+		}
 	}
 
 	// Use this for initialization

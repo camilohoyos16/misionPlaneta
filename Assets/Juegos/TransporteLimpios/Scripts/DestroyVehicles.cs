@@ -6,6 +6,7 @@ public class DestroyVehicles : MonoBehaviour {
 
 	void OnBecameInvisible()
 	{
-		Destroy (GetComponentInParent<VehicleMovement>().gameObject);
+		VehiclesGameManager.totalVehiclesGameobjects.Remove(GetComponentInParent<VehicleMovement>().gameObject);
+		DestroyObject(GetComponentInParent<VehicleMovement>().gameObject);
 	}
 }

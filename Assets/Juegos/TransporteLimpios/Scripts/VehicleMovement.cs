@@ -14,14 +14,18 @@ public class VehicleMovement : MonoBehaviour {
 	private Rigidbody2D c_rigidBody;
 	private Animator c_vehicleAnimator;
 	public string vehicleLayer;
+	public int isFixed;
 
 	// Use this for initialization
 	void Start () {
+		isFixed = Random.Range ((int)0, (int)2);
 		c_rigidBody = GetComponent<Rigidbody2D> ();
 		c_vehicleAnimator = GetComponentInChildren<Animator> ();
 		GetComponentInChildren<SpriteRenderer> ().sortingLayerName = vehicleLayer;
 		AssignScoreValue ();
 		AssignMovementVector ();
+		if (isFixed == 1)
+			OnMouseDown ();
 	}
 	
 	// Update is called once per frame
@@ -38,8 +42,10 @@ public class VehicleMovement : MonoBehaviour {
 	{
 		c_vehicleAnimator.SetTrigger ("isFixed");
 		GetComponent<BoxCollider2D> ().enabled = false;
-		Instantiate (fixedVehicle, transform.position + Vector3.up*1, fixedVehicle.transform.rotation);
-		VehiclesGameManager.Instance.PlusScore (score);
+		if (isFixed == 0) {
+			Instantiate (fixedVehicle, transform.position + Vector3.up * 1, fixedVehicle.transform.rotation);
+			VehiclesGameManager.Instance.PlusScore (score);
+		}
 	}
 
 	private void AssignScoreValue()

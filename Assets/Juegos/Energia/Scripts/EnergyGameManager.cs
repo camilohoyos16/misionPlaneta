@@ -34,8 +34,16 @@ public class EnergyGameManager : MonoBehaviour {
 		}
 	}
 
-	void Start()
+	void OnEnable()
 	{
+		amountOfLightTurnOn = 0;
+		amountOfLightTurnOff = 0;
+		globalScore = 0;
+		timer = 0;
+	}
+	void OnDisable()
+	{
+		instance = null;
 	}
 
 	void Update()
@@ -49,12 +57,6 @@ public class EnergyGameManager : MonoBehaviour {
 				}
 			}
 		}
-	}
-
-	void OnDisable()
-	{
-		globalScore = 0;
-		amountOfLightTurnOff = 0;
 	}
 
 	public void PlusScore(int score)

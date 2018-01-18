@@ -12,9 +12,11 @@ public class ChangeTip : MonoBehaviour {
 	}
 
 	public position curentPosition;
+	private int pushButton;
 
 	void Start()
 	{
+		pushButton = 0;
 		curentPosition = position.left;
 	}
 
@@ -24,12 +26,17 @@ public class ChangeTip : MonoBehaviour {
 
 	public void OnChangePage()
 	{
-		if (curentPosition == position.right) {
-			curentPosition = position.left;
-			c_animator.SetTrigger ("toLeft");
-		}else if (curentPosition == position.left) {
-			curentPosition = position.right;
-			c_animator.SetTrigger ("toRight");
+		if (pushButton != 0) {
+			if (curentPosition == position.right) {
+				curentPosition = position.left;
+				c_animator.SetTrigger ("toRight");
+			} else if (curentPosition == position.left) {
+				curentPosition = position.right;
+				c_animator.SetTrigger ("toLeft");
+			}
+		} else {
+			c_animator.SetTrigger ("firstMove");
+			pushButton++;
 		}
 	}
 }

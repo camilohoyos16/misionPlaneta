@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnVehicles : MonoBehaviour {
 
-	[SerializeField] private GameObject[] vehiclesPrefabs;
+	[SerializeField] private VehicleMovement[] vehiclesPrefabs;
 	[SerializeField] private SpawnPointInformation[] spawnPoint;
 
 	void OnEnable()
@@ -41,14 +41,15 @@ public class SpawnVehicles : MonoBehaviour {
 		} while(!spawnPoint [randomPoint].isAvailable);
 
 		randomCar = Random.Range (0, vehiclesPrefabs.Length);
-		GameObject currentVehiculToSpawn = vehiclesPrefabs [randomCar];
-
+		VehicleMovement currentVehiculToSpawn = vehiclesPrefabs [randomCar];
 		spawnPoint [randomPoint].isAvailable = false;
-		currentVehiculToSpawn.GetComponent<VehicleMovement> ().directionOfMovement = spawnPoint[randomPoint].spawnDirection;
+		currentVehiculToSpawn.directionOfMovement = spawnPoint[randomPoint].spawnDirection;
 
-		currentVehiculToSpawn.GetComponent<VehicleMovement> ().speedOfMovement = spawnPoint [randomPoint].speed;
-		currentVehiculToSpawn.GetComponent<VehicleMovement> ().vehicleLayer = spawnPoint [randomPoint].vehicleLayer;
-		Instantiate (currentVehiculToSpawn, spawnPoint [randomPoint].transform.position, transform.rotation);
+		currentVehiculToSpawn.speedOfMovement = spawnPoint [randomPoint].speed;
+		currentVehiculToSpawn.vehicleLayer = spawnPoint [randomPoint].vehicleLayer;
+		VehicleMovement car = Instantiate (currentVehiculToSpawn, spawnPoint [randomPoint].transform.position, transform.rotation);
+		VehiclesGameManager.totalVehiclesGameobjects.Add (car.gameObject);
+		car.gameObject.SetActive (true);
 		StartCoroutine (ActiveSpawnPoint(spawnPoint [randomPoint]));
 		StartCoroutine (CallToSpawn ());
 	}
