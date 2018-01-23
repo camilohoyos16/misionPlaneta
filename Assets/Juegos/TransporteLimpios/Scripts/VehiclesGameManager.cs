@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum Direction{
-	left,
+	left ,
 	right,
 	up,
 	down

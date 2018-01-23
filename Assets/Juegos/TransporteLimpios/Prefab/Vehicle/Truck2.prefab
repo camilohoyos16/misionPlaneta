@@ -112,7 +112,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1512896006499660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.146479, y: 3.655552, z: -14.1875}
+  m_LocalPosition: {x: 363.67664, y: 182.51917, z: -14.1875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4501074591657966}
@@ -216,6 +216,8 @@ MonoBehaviour:
   isFixed: 0
   needToFixedImage: {fileID: 1463611008303376}
   needToFixedImage2: {fileID: 1422069381534422}
+  isInSemaforo: 0
+  isMove: 0
 --- !u!114 &114559554324402504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -306,7 +308,7 @@ SpriteRenderer:
   m_SortingLayer: 11
   m_SortingOrder: 11
   m_Sprite: {fileID: 21300000, guid: 0eccb817bd93ab645a38eff1d208f1c1, type: 3}
-  m_Color: {r: 1, g: 0.007352948, b: 0.007352948, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -350,7 +352,7 @@ SpriteRenderer:
   m_SortingLayer: 11
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 2191dea07a14a2644a4981b47d82f7ad, type: 3}
-  m_Color: {r: 0.007352948, g: 0.0070285536, b: 0.0070285536, a: 1}
+  m_Color: {r: 0.007352948, g: 0.0070285536, b: 0.0070285536, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

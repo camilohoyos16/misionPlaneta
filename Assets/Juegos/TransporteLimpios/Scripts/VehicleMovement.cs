@@ -17,9 +17,15 @@ public class VehicleMovement : MonoBehaviour {
 	public int isFixed;
 	public GameObject needToFixedImage;
 	public GameObject needToFixedImage2;
+	public bool isInSemaforo;
+	public bool isMove;
 
 	// Use this for initialization
 	void Start () {
+		Semaforo.redLight += StopVehicle;
+		Semaforo.greenLight += MoveVehicleAgain;		
+		isInSemaforo = false;
+		isMove = true;
 		isFixed = Random.Range ((int)0, (int)2);
 		c_rigidBody = GetComponent<Rigidbody2D> ();
 		c_vehicleAnimator = GetComponentInChildren<Animator> ();
@@ -31,10 +37,21 @@ public class VehicleMovement : MonoBehaviour {
 		if (isFixed == 1)
 			OnMouseDown ();
 	}
-	
+
+	void OnEnable()
+	{
+	}
+
+	void OnDisable()
+	{
+		Semaforo.redLight -= StopVehicle;
+		Semaforo.greenLight -= MoveVehicleAgain;
+	}
+
 	// Update is called once per frame
 	void Update () {
-		Move ();
+		if(isMove)
+			Move ();
 	}
 
 	private void Move()
@@ -45,9 +62,10 @@ public class VehicleMovement : MonoBehaviour {
 	void OnMouseDown()
 	{
 		c_vehicleAnimator.SetTrigger ("isFixed");
-		GetComponent<BoxCollider2D> ().enabled = false;
 		needToFixedImage.SetActive (false);
 		if (isFixed == 0) {
+			isFixed = 1;
+			//GetComponent<BoxCollider2D> ().enabled = false;
 			Instantiate (fixedVehicle, transform.position + Vector3.up * 1, fixedVehicle.transform.rotation);
 			VehiclesGameManager.Instance.PlusScore (score);
 		}
@@ -90,7 +108,42 @@ public class VehicleMovement : MonoBehaviour {
 		}
 	}
 
-	private void ChangeSpriteLayer()
+	public void StopVehicle()
 	{
+		if (isInSemaforo) {
+			c_rigidBody.velocity = Vector2.zero;
+			isMove = false;
+		}
+	}
+
+	public void MoveVehicleAgain()
+	{
+		if (isInSemaforo) {
+			c_rigidBody.velocity = movementVector;
+			isMove = true;
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D coll){
+		if (coll.CompareTag ("semaforo")) {
+			isInSemaforo = true;
+			if (!Semaforo.canMove)
+				StopVehicle ();
+		}
+	}
+
+	/*void OnTriggerStay2D(Collider2D coll){
+		if (coll.CompareTag ("semaforo")) {
+			if (!Semaforo.canMove)
+				StopVehicle ();
+			isInSemaforo = true;
+		}
+	}*/
+
+	void OnTriggerExit2D(Collider2D coll)
+	{
+		if (coll.CompareTag ("semaforo")) {
+			isInSemaforo = false;
+		}
 	}
 }

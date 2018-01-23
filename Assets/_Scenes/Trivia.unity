@@ -2698,6 +2698,8 @@ MonoBehaviour:
   c_audioLisener: {fileID: 1769624486}
   correctAnswer: {fileID: 8300000, guid: 0cd34cfbdba7ce94c80cf22dc451d34f, type: 3}
   wrongAnswer: {fileID: 8300000, guid: f5b5bd7f1e5f173439c23af23aa53e72, type: 3}
+  abucheo: {fileID: 8300000, guid: 4236692f87e776645997f5c32dee64f7, type: 3}
+  felicitaciones: {fileID: 8300000, guid: 86c190e2c204fc34eb619bc38d12209d, type: 3}
 --- !u!4 &1769624485
 Transform:
   m_ObjectHideFlags: 0

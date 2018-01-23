@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class ChangeTip : MonoBehaviour {
 
 	[SerializeField] private Animator c_animator;
+	[SerializeField] private EventSystem c_eventSystem;
+	[SerializeField] private StandaloneInputModule input;
 	public enum position{
 		right,
 		left
@@ -38,5 +41,6 @@ public class ChangeTip : MonoBehaviour {
 			c_animator.SetTrigger ("firstMove");
 			pushButton++;
 		}
+		c_eventSystem.SetSelectedGameObject( null);
 	}
 }
