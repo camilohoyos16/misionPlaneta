@@ -29,7 +29,7 @@ public class ScoreManager : MonoBehaviour {
 	[SerializeField] private AudioClip wrongAnswer;
 	[SerializeField] private AudioClip abucheo;
 	[SerializeField] private AudioClip felicitaciones;
-
+	public AudioSource spokenTutorial;
 
 	void OnEnable()
 	{
@@ -53,6 +53,7 @@ public class ScoreManager : MonoBehaviour {
 	public void OnDissapearTutorial()
 	{
 		tutorial.SetActive (false);
+		spokenTutorial.Stop ();
 	}
 
 	public void CheckAnswer(bool isCorrect)

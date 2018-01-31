@@ -18,6 +18,8 @@ public class UIManager : MonoBehaviour {
 	[SerializeField] private int tutorialTime;
 	[SerializeField] private PopUpsController popup;
 
+	public AudioSource spokenTutorial;
+
 	void OnEnable()
 	{
 	}
@@ -41,6 +43,7 @@ public class UIManager : MonoBehaviour {
 	public void OnClickDissapearTutorial()
 	{
 		tutorial.SetActive (false);
+		spokenTutorial.Stop ();
 		popup.OnStartPopUps ();
 	}
 

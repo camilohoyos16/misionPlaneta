@@ -18,6 +18,7 @@ public class EnergyGameManager : MonoBehaviour {
 	public float gameTime;
 	public static float timer;
 	public bool isPlaying;
+	public AudioSource apagabombillo;
 
 	public List<Lights> lights = new List<Lights>();
 
@@ -62,6 +63,7 @@ public class EnergyGameManager : MonoBehaviour {
 	public void PlusScore(int score)
 	{
 		if (isPlaying) {
+			apagabombillo.Play ();
 			energyUI.UpdateBatteryCharge ();
 			amountOfLightTurnOff++;
 			print ("TurnOff: " + amountOfLightTurnOff);

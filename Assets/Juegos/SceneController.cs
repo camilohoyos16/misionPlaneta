@@ -82,8 +82,8 @@ public class SceneController : MonoBehaviour {
 		SceneManager.LoadScene (levelName);
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	public void OnExitGame()
+	{
+		Application.Quit ();
 	}
 }

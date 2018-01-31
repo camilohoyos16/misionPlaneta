@@ -20,6 +20,7 @@ public class EnergyUIManager : MonoBehaviour {
 	public int level2;
 	public int level3;
 	private float stepsTochangeBattery;
+	public AudioSource spokenTutorial;
 
 	void OnEnable()
 	{
@@ -34,8 +35,6 @@ public class EnergyUIManager : MonoBehaviour {
 		EnergyGameManager.Instance.onGameOver += GameOver;
 		tutorial.SetActive (true);
 		gameOver.SetActive (false);
-		dissapearTutorial = DissapearTutorial ();
-		StartCoroutine (dissapearTutorial);
 		stepsTochangeBattery = level3 / battery.Length;
 	}
 	
@@ -44,21 +43,10 @@ public class EnergyUIManager : MonoBehaviour {
 		
 	}
 
-	IEnumerator dissapearTutorial;
-	IEnumerator DissapearTutorial()
-	{
-		yield return new WaitForSeconds (tutorialTime);
-		tutorial.SetActive (false);
-		EnergyGameManager.Instance.ControlFirstTurnOn ();
-		EnergyGameManager.Instance.OnGameStart ();
-		dissapearTutorial = null;
-	}
-
 	public void OnClickDissapearTutorial()
 	{
-		if (dissapearTutorial != null)
-			StopCoroutine (dissapearTutorial);
 		tutorial.SetActive (false);
+		spokenTutorial.Stop ();
 		EnergyGameManager.Instance.OnGameStart ();
 	}
 
@@ -95,10 +83,8 @@ public class EnergyUIManager : MonoBehaviour {
 	private void GameOver()
 	{
 		gameOver.SetActive (true);
-		gameOverText.text = string.Format ("Lograste cambiar el emisor de gases de {0} vehículos, ¡inténtalo de nuevo y oxigena tu ciudad! \n " +
-			"Tu puntuación fue de {1}", VehiclesGameManager.amountOfVehiclesFixed, VehiclesGameManager.globalScore);
 
-		if (EnergyGameManager.amountOfLightTurnOff <= level1) {
+		if (EnergyGameManager.amountOfLightTurnOff <= level1 || EnergyGameManager.amountOfLightTurnOff >= 0) {
 			gameOverText.text = string.Format ("Lograste apagar {0} luces, muy pocas, no has ahorrado suficiente energía para ayudar al planeta, ¡inténtalo de nuevo!", EnergyGameManager.amountOfLightTurnOff);
 		}
 

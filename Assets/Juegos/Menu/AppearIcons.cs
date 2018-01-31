@@ -9,6 +9,9 @@ public class AppearIcons : MonoBehaviour {
 	[SerializeField] private Button[] iconsButtons;
 	[SerializeField] private float timeToAppear;
 
+
+	public AudioSource focoHabla;
+	public AudioSource delfinHabla;
 	// Use this for initialization
 	void Start () {
 		for (int i = 0; i < iconsButtons.Length; i++) {
@@ -19,6 +22,16 @@ public class AppearIcons : MonoBehaviour {
 			tempColor.a = 0;
 			iconsImages [i].color = tempColor;
 		}
+	}
+
+	public void OnDelfinHabla()
+	{
+		delfinHabla.Play ();
+	}
+
+	public void OnFocoHabla()
+	{
+		focoHabla.Play ();
 	}
 
 	void OnEnable()
