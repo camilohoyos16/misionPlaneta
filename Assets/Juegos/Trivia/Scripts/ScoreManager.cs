@@ -31,15 +31,24 @@ public class ScoreManager : MonoBehaviour {
 	[SerializeField] private AudioClip felicitaciones;
 	public AudioSource spokenTutorial;
 
-	void OnEnable()
+	[Header ("Two games components")]
+	[Space (10)]
+	[SerializeField] private CanvasGroup triviaCanvas;
+	[SerializeField] private float timeToFade;
+
+	void Awake()
 	{
-		score = 0;
-		howManyAnswered = 0;
 		if (instance == null) {
 			instance = this;
 		} else {
 			Destroy (gameObject);
 		}
+	}
+
+	void OnDestroy()
+	{
+		score = 0;
+		howManyAnswered = 0;
 	}
 
 	// Use this for initialization
@@ -73,6 +82,14 @@ public class ScoreManager : MonoBehaviour {
 		print (score);
 	}
 
+	private void ActiveEndGame(AudioClip sound, float timeToStartSound, GameObject finalImage)
+	{
+		c_audioLisener.clip = sound;
+		c_audioLisener.time = 0.7f;
+		c_audioLisener.Play ();
+		finalImage.SetActive(true);
+	}
+
 	private void RankedPlayer()
 	{
 		buttonsFinal.SetActive (true);
@@ -80,37 +97,61 @@ public class ScoreManager : MonoBehaviour {
 		case 0:
 		case 1:
 		case 2:
-			c_audioLisener.clip = abucheo;
-			c_audioLisener.time = 0.7f;
-			c_audioLisener.Play ();
-			level1.SetActive(true);
+			ActiveEndGame (abucheo, 0.7f, level1);
 			break;
 		case 3:
 		case 4:
 		case 5:
-			c_audioLisener.clip = abucheo;
-			c_audioLisener.time = 0.7f;
-			level2.SetActive(true);
-			c_audioLisener.Play ();
-
+			ActiveEndGame (abucheo, 0.7f, level2);
 			break;
 		case 6:
 		case 7:
 		case 8:
-			c_audioLisener.clip = felicitaciones;
-			c_audioLisener.time = 0.7f;
-			level3.SetActive(true);
-			c_audioLisener.Play ();
-
+			ActiveEndGame (felicitaciones, 0.7f, level3);
 			break;
 		case 9:
 		case 10:
-			c_audioLisener.clip = felicitaciones;
-			c_audioLisener.time = 0.7f;
-			level4.SetActive(true);
-			c_audioLisener.Play ();
-
+			ActiveEndGame (felicitaciones, 0.7f, level4);
 			break;
+		}
+	}
+
+	public void AppearTrivia()
+	{
+		StartCoroutine (DoAppearTrivia ());
+	}
+
+	IEnumerator DoAppearTrivia()
+	{
+		triviaCanvas.blocksRaycasts = false;
+		float timer = 0;
+		float currentAlpha = 0;
+		while (timer < timeToFade) {
+
+			currentAlpha = Mathf.Lerp (0, 1, timer / timeToFade);
+			triviaCanvas.alpha = currentAlpha;
+			yield return null;
+			timer += Time.deltaTime;
+		}
+		triviaCanvas.blocksRaycasts = true;
+	}
+
+	public void DissapearTrivia ()
+	{
+		StartCoroutine (DoDissappearTrivia ());
+	}
+
+	IEnumerator DoDissappearTrivia()
+	{
+		triviaCanvas.blocksRaycasts = false;
+		float timer = 0;
+		float currentAlpha = 0;
+		while (timer < timeToFade) {
+
+			currentAlpha = Mathf.Lerp (1, 0, timer / timeToFade);
+			triviaCanvas.alpha = currentAlpha;
+			yield return null;
+			timer += Time.deltaTime;
 		}
 	}
 
