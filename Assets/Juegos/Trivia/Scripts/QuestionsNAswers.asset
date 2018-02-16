@@ -12,156 +12,8 @@ MonoBehaviour:
   m_Name: QuestionsNAswers
   m_EditorClassIdentifier: 
   data:
-  - answerType: 2
-    question: "\xBFCu\xE1l es el principal contaminante de la atm\xF3sfera?"
-    answers:
-    - isCorrect: 1
-      answer: "CO2 (di\xF3xido de carbono)."
-    - isCorrect: 0
-      answer: "Ox\xEDgeno."
-    - isCorrect: 0
-      answer: Aerosoles.
-  - answerType: 1
-    question: "\xBFCu\xE1nta energ\xEDa puedes ahorrar utilizando un bombillo de bajo
-      consumo?"
-    answers:
-    - isCorrect: 1
-      answer: Hasta un 80%.
-    - isCorrect: 0
-      answer: 20%.
-    - isCorrect: 0
-      answer: Hasta un 50%.
-  - answerType: 2
-    question: "\xBFQu\xE9 podemos hacer para reducir el impacto del efecto invernadero?"
-    answers:
-    - isCorrect: 1
-      answer: "Sembrar m\xE1s \xE1rboles."
-    - isCorrect: 0
-      answer: "Reutilizar el pl\xE1stico."
-    - isCorrect: 0
-      answer: "Usar protector solar dos veces al d\xEDa."
-  - answerType: 2
-    question: "\xBFCu\xE1les de los siguientes objetos se puede reciclar?"
-    answers:
-    - isCorrect: 1
-      answer: "Botella de pl\xE1stico."
-    - isCorrect: 0
-      answer: Icopor.
-    - isCorrect: 0
-      answer: Botella de vidrio.
-  - answerType: 2
-    question: "\xBFCu\xE1ndo es el d\xEDa mundial del medio ambiente?"
-    answers:
-    - isCorrect: 1
-      answer: 5 de junio.
-    - isCorrect: 0
-      answer: 2 de agosto.
-    - isCorrect: 0
-      answer: 16 de noviembre.
-  - answerType: 2
-    question: "\xBFCu\xE1l de los siguientes agentes emite mayor cantidad de contaminantes?"
-    answers:
-    - isCorrect: 1
-      answer: Fabricas industriales.
-    - isCorrect: 0
-      answer: "Veh\xEDculos."
-    - isCorrect: 0
-      answer: Hogares.
-  - answerType: 2
-    question: "\xBFCu\xE1les de estos elementos hacen parte del medio ambiente?"
-    answers:
-    - isCorrect: 1
-      answer: "Animales, r\xEDos y selvas."
-    - isCorrect: 0
-      answer: Gobierno, empresas e iglesias.
-    - isCorrect: 0
-      answer: Jardines, parques y centros comerciales.
-  - answerType: 2
-    question: "\xBFQu\xE9 es el reciclaje?"
-    answers:
-    - isCorrect: 1
-      answer: Proceso que se le hace a un material para obtener una nueva materia
-        prima o producto.
-    - isCorrect: 0
-      answer: Proceso de convertir un objeto utilizado a nuevo.
-    - isCorrect: 0
-      answer: Donar pertenencias a personas menos favorecidas.
-  - answerType: 1
-    question: "\xBFCu\xE1l es parque y reserva natural m\xE1s importante del pa\xEDs?"
-    answers:
-    - isCorrect: 1
-      answer: Parque Nacional Natural el Cocuy.
-    - isCorrect: 0
-      answer: Parque Nacional Tayrona.
-    - isCorrect: 0
-      answer: "El parque del Caf\xE9."
   - answerType: 0
-    question: "\xBFQu\xE9 tipo de iluminaci\xF3n es la m\xE1s eficiente y ayuda a
-      ahorrar m\xE1s energ\xEDa?"
-    answers:
-    - isCorrect: 1
-      answer: LED.
-    - isCorrect: 0
-      answer: Fluorescente.
-    - isCorrect: 0
-      answer: Incandescente.
-  - answerType: 0
-    question: "\xBFCu\xE1les de las siguientes, son fuentes alternativa de energ\xEDa?"
-    answers:
-    - isCorrect: 1
-      answer: "E\xF3lica, h\xEDdrica y solar."
-    - isCorrect: 0
-      answer: Nuclear, solar y auditiva.
-    - isCorrect: 0
-      answer: Represas, molinos y tractores.
-  - answerType: 2
-    question: "\xBFQu\xE9 puedes hacer con el papel que te sobre?"
-    answers:
-    - isCorrect: 1
-      answer: Reciclarlo.
-    - isCorrect: 0
-      answer: Botarlo.
-    - isCorrect: 0
-      answer: Guardarlo.
-  - answerType: 2
-    question: "\xBFCu\xE1l es la importancia de un material biodegradable?"
-    answers:
-    - isCorrect: 1
-      answer: Este puede reintegrarse nuevamente a la tierra sin afectar a los seres
-        vivos.
-    - isCorrect: 0
-      answer: Ayuda a las plantas a crecer.
-    - isCorrect: 0
-      answer: Su material se puede reutilizar.
-  - answerType: 2
-    question: "\xBFCu\xE1l de los siguientes materiales es ecol\xF3gico?"
-    answers:
-    - isCorrect: 1
-      answer: Bolsa de papel.
-    - isCorrect: 0
-      answer: Icopor.
-    - isCorrect: 0
-      answer: Acetato.
-  - answerType: 2
-    question: "\xBFCu\xE1les son los tipos de contaminaci\xF3n?"
-    answers:
-    - isCorrect: 1
-      answer: "Ambiental, auditiva, visual, lum\xEDnica."
-    - isCorrect: 0
-      answer: "Olfativa, t\xE1ctil, visual, gustativa."
-    - isCorrect: 0
-      answer: "Desperdicios, basuras, pesticidas, qu\xEDmicos."
-  - answerType: 0
-    question: "\xBFQu\xE9 beneficios trae el ahorro de energ\xEDa?"
-    answers:
-    - isCorrect: 1
-      answer: Cuidado del planeta y ahorro de costos en los servicios de electricidad.
-    - isCorrect: 0
-      answer: Prestigio.
-    - isCorrect: 0
-      answer: "Mayor duraci\xF3n de los electrodom\xE9sticos. "
-  - answerType: 1
-    question: "El Arawuana, es un pez de agua dulce con gran capacidad para saltar
+    question: "El Arawuana, es un pez de agua dulce que se puede encontrar en Vichada,
       \xBFsabes qu\xE9 tama\xF1o puede alcanzar?"
     answers:
     - isCorrect: 1
@@ -171,84 +23,8 @@ MonoBehaviour:
     - isCorrect: 0
       answer: 2 metros.
   - answerType: 1
-    question: "El delf\xEDn rosado es uno de los animales m\xE1s inteligente, \xE9stos
-      suelen estar acompa\xF1ados de\u2026"
-    answers:
-    - isCorrect: 1
-      answer: "Su cr\xEDa."
-    - isCorrect: 0
-      answer: "Su n\xFAcleo familiar."
-    - isCorrect: 0
-      answer: Su cardumen.
-  - answerType: 1
-    question: "\xBFCu\xE1l de los siguiente rios, desemboca en el R\xEDo Orinoco?"
-    answers:
-    - isCorrect: 1
-      answer: "R\xEDo Meta."
-    - isCorrect: 0
-      answer: Rio Nilo.
-    - isCorrect: 0
-      answer: "R\xEDo Aburr\xE1."
-  - answerType: 1
-    question: "\xBFCu\xE1l es el tercer r\xEDo m\xE1s caudaloso del mundo?"
-    answers:
-    - isCorrect: 1
-      answer: "R\xEDo Orinoco."
-    - isCorrect: 0
-      answer: "R\xEDo Magdalena."
-    - isCorrect: 0
-      answer: "R\xEDo Amazonas."
-  - answerType: 1
-    question: "\xBFCu\xE1l de estas especies puedes encontrar en el R\xEDo Orinoco?"
-    answers:
-    - isCorrect: 1
-      answer: "Cocodrilos, pira\xF1as y anacondas."
-    - isCorrect: 0
-      answer: "Ballena jorobada, bagre y salm\xF3n."
-    - isCorrect: 0
-      answer: "Zarig\xFCeya."
-  - answerType: 1
-    question: "La especie Cachicama pertenece a la familia de los\u2026"
-    answers:
-    - isCorrect: 1
-      answer: Armadillos.
-    - isCorrect: 0
-      answer: Caimanes.
-    - isCorrect: 0
-      answer: Anfibios.
-  - answerType: 1
-    question: "Habita en selva h\xFAmeda y tiene una longitud de hasta 9 metros, este
-      animal es\u2026"
-    answers:
-    - isCorrect: 1
-      answer: "Anaconda o g\xFCio."
-    - isCorrect: 0
-      answer: Cascabel.
-    - isCorrect: 0
-      answer: "Pit\xF3n."
-  - answerType: 1
-    question: "\xBFEn cu\xE1l de los siguientes parques puedes encontrar hasta 5 especies
-      de monos?"
-    answers:
-    - isCorrect: 1
-      answer: Parque Nacional Natural el Tuparro.
-    - isCorrect: 0
-      answer: Parque Nacional Natural Tayrona.
-    - isCorrect: 0
-      answer: Panaca.
-  - answerType: 1
-    question: "\xBFCu\xE1l de los siguientes r\xEDos es \u201CLa nueva joya de la
-      orinoqu\xEDa colombiana\u201D?"
-    answers:
-    - isCorrect: 1
-      answer: "R\xEDo Bita."
-    - isCorrect: 0
-      answer: "R\xEDo Magdalena."
-    - isCorrect: 0
-      answer: "R\xEDo Cauca."
-  - answerType: 1
-    question: "El Zamuro, es un ave rapaz que habita en la orinoqu\xEDa, y se alimenta
-      de\u2026"
+    question: "El Zamuro, es un ave rapaz que habita en la orinoqu\xEDa colombiana,
+      y se alimenta de\u2026"
     answers:
     - isCorrect: 1
       answer: "Basura y carro\xF1a."
@@ -256,26 +32,7 @@ MonoBehaviour:
       answer: Perros y hamburguesas.
     - isCorrect: 0
       answer: Insectos.
-  - answerType: 1
-    question: "Los cuatro r\xEDos m\xE1s importantes de Vichada, son\u2026"
-    answers:
-    - isCorrect: 1
-      answer: Meta, Vichada, Guaviare y Tomo.
-    - isCorrect: 0
-      answer: "Cauca, Piedras, T\xE1mesis y Atrato."
-    - isCorrect: 0
-      answer: "Putumayo, Caquet\xE1, Arauca y Sin\xFA."
-  - answerType: 1
-    question: "Vichada, y en general la regi\xF3n Orinoqu\xEDa, es considerada un
-      h\xE1bitat\u2026"
-    answers:
-    - isCorrect: 1
-      answer: "Selv\xE1tica/Llanura."
-    - isCorrect: 0
-      answer: Rural/Urbana.
-    - isCorrect: 0
-      answer: "Escarpada/\xC1rida."
-  - answerType: 1
+  - answerType: 2
     question: "La Guacamaya Real, es una de las aves m\xE1s llamativas de la regi\xF3n
       Orinoqu\xEDa, esta habita\u2026"
     answers:
@@ -284,8 +41,28 @@ MonoBehaviour:
     - isCorrect: 0
       answer: "Zool\xF3gicos y fincas."
     - isCorrect: 0
-      answer: "Monta\xF1as y cumbres."
+      answer: "Monta\xF1as y cumbres. "
+  - answerType: 0
+    question: "Este invertebrado, que habita en selva h\xFAmeda y tiene una longitud
+      de hasta 9 metros es conocida como\u2026"
+    answers:
+    - isCorrect: 1
+      answer: "Anaconda o g\xFCio."
+    - isCorrect: 0
+      answer: Cascabel.
+    - isCorrect: 0
+      answer: "Pit\xF3n."
   - answerType: 1
+    question: "El delf\xEDn rosado es uno de los animales m\xE1s inteligente del planeta,
+      \xE9stos, suelen estar acompa\xF1ados de\u2026"
+    answers:
+    - isCorrect: 1
+      answer: "Su cr\xEDa o pareja."
+    - isCorrect: 0
+      answer: "Su n\xFAcleo familiar."
+    - isCorrect: 0
+      answer: Su cardumen.
+  - answerType: 2
     question: "El Corocoro Rojo, es un ave de hasta 61cm de largo que suele estar
       acompa\xF1ado de\u2026"
     answers:
@@ -295,12 +72,42 @@ MonoBehaviour:
       answer: Su cardumen.
     - isCorrect: 0
       answer: Su manada.
-  - answerType: 1
-    question: "\xBFCu\xE1l es la empresa que suministra la energ\xEDa en tu ciudad?"
+  - answerType: 0
+    question: Este anfibio se adhiere con sus 18 dedos sobre la hoja de una planta
+      y tiene ojos amarillos, es...
     answers:
     - isCorrect: 1
-      answer: ElectroVichada.
+      answer: Rana Platanera.
     - isCorrect: 0
-      answer: Empresas Varias de Vichada.
+      answer: Rana Cururu.
     - isCorrect: 0
-      answer: "Servicios P\xFAblicos de Vichada."
+      answer: Rana Australiana.
+  - answerType: 1
+    question: "El mono tit\xED, es mayormente conocido por\u2026"
+    answers:
+    - isCorrect: 1
+      answer: "Piel de cara negra y pelo gris\xE1ceo."
+    - isCorrect: 0
+      answer: Piel de cara negra y pelo oscuro.
+    - isCorrect: 0
+      answer: "Pelo y ojos gris\xE1ceo."
+  - answerType: 2
+    question: "El mayor de los felinos americanos, habitante de nuestra regi\xF3n
+      y de coloraci\xF3n amarilla rojiza, es conocido c\xF3mo\u2026"
+    answers:
+    - isCorrect: 1
+      answer: Jaguar o tigre mariposo.
+    - isCorrect: 0
+      answer: "Le\xF3n."
+    - isCorrect: 0
+      answer: Cheetah.
+  - answerType: 0
+    question: "El Cachicamo o armadillo, es un mam\xEDfero que pertenece a la familia
+      de\u2026"
+    answers:
+    - isCorrect: 1
+      answer: Osos hormigueros y perezosos.
+    - isCorrect: 0
+      answer: Ornitorrinco y garza.
+    - isCorrect: 0
+      answer: "Zamuro y G\xFCio."
