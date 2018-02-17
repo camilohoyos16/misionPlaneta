@@ -19,6 +19,7 @@ public class Answers
 [Serializable]
 public class AnswersNQuestions
 {
+	public Sprite answerSprite;
 	public TypeOfAnswer answerType;
     public string question;
     [SerializeField] public List<Answers> answers;

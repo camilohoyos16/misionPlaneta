@@ -16,6 +16,12 @@ public class EnergyUIManager : MonoBehaviour {
 	[SerializeField] private GameObject tutorial;
 	[SerializeField] private int tutorialTime;
 
+	[Header("Background Transition")]
+	[SerializeField] private float transitionTime;
+	[SerializeField] private float timeToStay;
+	[SerializeField] private Image background;
+	[SerializeField] private float minAlphaValue;
+
 	public int level1;
 	public int level2;
 	public int level3;
@@ -33,6 +39,7 @@ public class EnergyUIManager : MonoBehaviour {
 
 	void Start () {
 		EnergyGameManager.Instance.onGameOver += GameOver;
+		EnergyGameManager.Instance.onGameStart += FistDayTransition;
 		tutorial.SetActive (true);
 		gameOver.SetActive (false);
 		stepsTochangeBattery = level3 / battery.Length;
@@ -41,6 +48,36 @@ public class EnergyUIManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	private void FistDayTransition()
+	{
+		DayTransition (false);
+	}
+
+	private void DayTransition(bool i)
+	{
+		StartCoroutine (DoDayTransition (i));
+	}
+
+	IEnumerator DoDayTransition(bool i/*0 is day to night - 1 night to day*/)
+	{
+		float timer = 0;
+		float currentAlpha = 0;
+		Color tempColor = background.color;
+		while (timer < transitionTime) {
+			if (i) {
+				currentAlpha = Mathf.Lerp (minAlphaValue, 1, timer / transitionTime);
+			} else {
+				currentAlpha = Mathf.Lerp (1, minAlphaValue, timer / transitionTime);
+			}
+			tempColor.a = currentAlpha;
+			background.color = tempColor;
+			yield return null;
+			timer += Time.deltaTime;
+		}
+		yield return new WaitForSeconds (timeToStay);
+		DayTransition (!i);
 	}
 
 	public void OnClickDissapearTutorial()

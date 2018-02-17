@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: QuestionsNAswers
   m_EditorClassIdentifier: 
   data:
-  - answerType: 0
+  - answerSprite: {fileID: 21300000, guid: c7dacb13d1358e449bcb29a9647e5392, type: 3}
+    answerType: 0
     question: "El Arawuana, es un pez de agua dulce que se puede encontrar en Vichada,
       \xBFsabes qu\xE9 tama\xF1o puede alcanzar?"
     answers:
@@ -22,7 +23,8 @@ MonoBehaviour:
       answer: "10 cent\xEDmetros."
     - isCorrect: 0
       answer: 2 metros.
-  - answerType: 1
+  - answerSprite: {fileID: 21300000, guid: dfb223d8a07a85c49bcf0f7de51bfecc, type: 3}
+    answerType: 1
     question: "El Zamuro, es un ave rapaz que habita en la orinoqu\xEDa colombiana,
       y se alimenta de\u2026"
     answers:
@@ -32,7 +34,8 @@ MonoBehaviour:
       answer: Perros y hamburguesas.
     - isCorrect: 0
       answer: Insectos.
-  - answerType: 2
+  - answerSprite: {fileID: 21300000, guid: 8a9973ade68327f4ea707158dd16d8f3, type: 3}
+    answerType: 2
     question: "La Guacamaya Real, es una de las aves m\xE1s llamativas de la regi\xF3n
       Orinoqu\xEDa, esta habita\u2026"
     answers:
@@ -42,7 +45,8 @@ MonoBehaviour:
       answer: "Zool\xF3gicos y fincas."
     - isCorrect: 0
       answer: "Monta\xF1as y cumbres. "
-  - answerType: 0
+  - answerSprite: {fileID: 21300000, guid: 02555613b81d3d542aae666046f1d474, type: 3}
+    answerType: 0
     question: "Este invertebrado, que habita en selva h\xFAmeda y tiene una longitud
       de hasta 9 metros es conocida como\u2026"
     answers:
@@ -52,7 +56,8 @@ MonoBehaviour:
       answer: Cascabel.
     - isCorrect: 0
       answer: "Pit\xF3n."
-  - answerType: 1
+  - answerSprite: {fileID: 0}
+    answerType: 1
     question: "El delf\xEDn rosado es uno de los animales m\xE1s inteligente del planeta,
       \xE9stos, suelen estar acompa\xF1ados de\u2026"
     answers:
@@ -62,7 +67,8 @@ MonoBehaviour:
       answer: "Su n\xFAcleo familiar."
     - isCorrect: 0
       answer: Su cardumen.
-  - answerType: 2
+  - answerSprite: {fileID: 21300000, guid: e5748210d4c29e94790edca836542e03, type: 3}
+    answerType: 2
     question: "El Corocoro Rojo, es un ave de hasta 61cm de largo que suele estar
       acompa\xF1ado de\u2026"
     answers:
@@ -72,7 +78,8 @@ MonoBehaviour:
       answer: Su cardumen.
     - isCorrect: 0
       answer: Su manada.
-  - answerType: 0
+  - answerSprite: {fileID: 21300000, guid: 696a41c462796b649a7afa061b384f7c, type: 3}
+    answerType: 0
     question: Este anfibio se adhiere con sus 18 dedos sobre la hoja de una planta
       y tiene ojos amarillos, es...
     answers:
@@ -82,7 +89,8 @@ MonoBehaviour:
       answer: Rana Cururu.
     - isCorrect: 0
       answer: Rana Australiana.
-  - answerType: 1
+  - answerSprite: {fileID: 21300000, guid: b059e9c71908ecc48b430629a8db2978, type: 3}
+    answerType: 1
     question: "El mono tit\xED, es mayormente conocido por\u2026"
     answers:
     - isCorrect: 1
@@ -91,7 +99,8 @@ MonoBehaviour:
       answer: Piel de cara negra y pelo oscuro.
     - isCorrect: 0
       answer: "Pelo y ojos gris\xE1ceo."
-  - answerType: 2
+  - answerSprite: {fileID: 21300000, guid: 32c6d0826df1b294197bb8362f91a761, type: 3}
+    answerType: 2
     question: "El mayor de los felinos americanos, habitante de nuestra regi\xF3n
       y de coloraci\xF3n amarilla rojiza, es conocido c\xF3mo\u2026"
     answers:
@@ -101,7 +110,8 @@ MonoBehaviour:
       answer: "Le\xF3n."
     - isCorrect: 0
       answer: Cheetah.
-  - answerType: 0
+  - answerSprite: {fileID: 21300000, guid: 9dbd4ff58ec5a0f4886c729286d9f690, type: 3}
+    answerType: 0
     question: "El Cachicamo o armadillo, es un mam\xEDfero que pertenece a la familia
       de\u2026"
     answers:

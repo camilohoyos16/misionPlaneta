@@ -11,6 +11,7 @@ public class CreateQuestionWithAnswers : MonoBehaviour {
 	[SerializeField] private int howManyButtons;
 	[Header ("BackgroundSettings")]
 	[SerializeField] private Image backGround;
+	[SerializeField] private Image answerImage;
 	[SerializeField] private Sprite energyBackgorund;
 	[SerializeField] private Sprite localBackgorund;
 	[SerializeField] private Sprite environmentBackgorund;
@@ -34,6 +35,7 @@ public class CreateQuestionWithAnswers : MonoBehaviour {
 		EraseLayout ();
 		if (indexButtonCreated < QuestionsCreator.Instance.amountOfQuestions) {
 			questionText.text = QuestionsCreator.questionsChoosed [indexButtonCreated].question;
+			answerImage.sprite = QuestionsCreator.questionsChoosed [indexButtonCreated].answerSprite;
 			List<int> indexesToUse = new List<int> ();
 			for (int i = 0; i < howManyButtons; i++) {
 				indexesToUse.Add(i);
