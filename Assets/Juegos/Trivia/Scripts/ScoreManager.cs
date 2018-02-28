@@ -9,6 +9,10 @@ public class ScoreManager : MonoBehaviour {
 		get{ return instance; }
 	}
 
+	public delegate void ChangeGame();
+	public event ChangeGame onStartTrivia;
+	public event ChangeGame onStartTrash;
+
 	public static int score;
 	public static int howManyAnswered;
 
@@ -72,6 +76,7 @@ public class ScoreManager : MonoBehaviour {
 			score++;
 			c_audioLisener.clip = correctAnswer;
 			c_audioLisener.time = 0f;
+			DissapearTrivia ();
 		} else {
 			c_audioLisener.clip = wrongAnswer;
 			c_audioLisener.time = 1f;
@@ -134,6 +139,9 @@ public class ScoreManager : MonoBehaviour {
 			timer += Time.deltaTime;
 		}
 		triviaCanvas.blocksRaycasts = true;
+		if (onStartTrivia != null) {
+			onStartTrivia ();
+		}
 	}
 
 	public void DissapearTrivia ()
@@ -152,6 +160,9 @@ public class ScoreManager : MonoBehaviour {
 			triviaCanvas.alpha = currentAlpha;
 			yield return null;
 			timer += Time.deltaTime;
+		}
+		if (onStartTrash != null) {
+			onStartTrash ();
 		}
 	}
 
