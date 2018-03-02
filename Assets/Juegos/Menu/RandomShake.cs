@@ -16,6 +16,11 @@ public class RandomShake : MonoBehaviour {
 		Shake ();
 	}
 
+	void OnEnable()
+	{
+		Shake ();
+	}
+
 	private void Shake()
 	{
 		timeToShake = Random.Range (minRandomValue, maxRandomValue);

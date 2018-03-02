@@ -14,110 +14,230 @@ MonoBehaviour:
   data:
   - answerSprite: {fileID: 21300000, guid: c7dacb13d1358e449bcb29a9647e5392, type: 3}
     answerType: 0
-    question: "El Arawuana, es un pez de agua dulce que se puede encontrar en Vichada,
-      \xBFsabes qu\xE9 tama\xF1o puede alcanzar?"
+    question: "Cu\xE1les son los tipos de contaminaci\xF3n?"
     answers:
     - isCorrect: 1
-      answer: "120 cent\xEDmetros."
+      answer: "Ambiental, auditiva, visual, lum\xEDnica."
     - isCorrect: 0
-      answer: "10 cent\xEDmetros."
+      answer: "Olfativa, t\xE1ctil, visual, gustativa."
     - isCorrect: 0
-      answer: 2 metros.
+      answer: "Desperdicios, basuras, pesticidas, qu\xEDmicos."
   - answerSprite: {fileID: 21300000, guid: dfb223d8a07a85c49bcf0f7de51bfecc, type: 3}
     answerType: 1
-    question: "El Zamuro, es un ave rapaz que habita en la orinoqu\xEDa colombiana,
-      y se alimenta de\u2026"
+    question: "Cu\xE1l es el principal contaminante de la atmosfera"
     answers:
     - isCorrect: 1
-      answer: "Basura y carro\xF1a."
+      answer: "Di\xF3xido de carbono CO2."
     - isCorrect: 0
-      answer: Perros y hamburguesas.
+      answer: Aerosoles.
     - isCorrect: 0
-      answer: Insectos.
+      answer: Oxigeno.
   - answerSprite: {fileID: 21300000, guid: 8a9973ade68327f4ea707158dd16d8f3, type: 3}
     answerType: 2
-    question: "La Guacamaya Real, es una de las aves m\xE1s llamativas de la regi\xF3n
-      Orinoqu\xEDa, esta habita\u2026"
+    question: "Cu\xE1les de los siguientes r\xEDos desembocan en el Orinoco"
     answers:
     - isCorrect: 1
-      answer: Selvas y bosques.
+      answer: Rio Meta.
     - isCorrect: 0
-      answer: "Zool\xF3gicos y fincas."
+      answer: Rio Muco.
     - isCorrect: 0
-      answer: "Monta\xF1as y cumbres. "
-  - answerSprite: {fileID: 21300000, guid: 02555613b81d3d542aae666046f1d474, type: 3}
+      answer: Rio Siare.
+  - answerSprite: {fileID: 21300000, guid: 8d1bb0d1853646e4588d0020bb7df5c5, type: 3}
     answerType: 0
-    question: "Este invertebrado, que habita en selva h\xFAmeda y tiene una longitud
-      de hasta 9 metros es conocida como\u2026"
+    question: "El delf\xEDn rosado es uno de los animales m\xE1s inteligentes estos
+      suelen estar acompa\xF1ados de"
     answers:
     - isCorrect: 1
-      answer: "Anaconda o g\xFCio."
+      answer: "Cr\xEDa."
     - isCorrect: 0
-      answer: Cascabel.
+      answer: Cardumen.
     - isCorrect: 0
-      answer: "Pit\xF3n."
-  - answerSprite: {fileID: 0}
+      answer: "N\xFAcleo familiar."
+  - answerSprite: {fileID: 21300000, guid: 8d1bb0d1853646e4588d0020bb7df5c5, type: 3}
     answerType: 1
-    question: "El delf\xEDn rosado es uno de los animales m\xE1s inteligente del planeta,
-      \xE9stos, suelen estar acompa\xF1ados de\u2026"
+    question: "Vichada y en general la regi\xF3n Orinoquia es considerada un h\xE1bitat"
     answers:
     - isCorrect: 1
-      answer: "Su cr\xEDa o pareja."
+      answer: "Selv\xE1tica /llanura."
     - isCorrect: 0
-      answer: "Su n\xFAcleo familiar."
+      answer: "Escarpada / \xE1rida."
     - isCorrect: 0
-      answer: Su cardumen.
+      answer: Rural /urbana.
   - answerSprite: {fileID: 21300000, guid: e5748210d4c29e94790edca836542e03, type: 3}
     answerType: 2
-    question: "El Corocoro Rojo, es un ave de hasta 61cm de largo que suele estar
-      acompa\xF1ado de\u2026"
+    question: "Que beneficio trae el ahorro de energ\xEDa"
     answers:
     - isCorrect: 1
-      answer: Su bandada.
+      answer: Cuidado del planeta y ahorro de costo en los servicios de electricidad.
     - isCorrect: 0
-      answer: Su cardumen.
+      answer: "Mayor duraci\xF3n de los electrodom\xE9sticos."
     - isCorrect: 0
-      answer: Su manada.
+      answer: prestigio.
   - answerSprite: {fileID: 21300000, guid: 696a41c462796b649a7afa061b384f7c, type: 3}
     answerType: 0
-    question: Este anfibio se adhiere con sus 18 dedos sobre la hoja de una planta
-      y tiene ojos amarillos, es...
+    question: "Cu\xE1les de los siguientes agentes emite mayor cantidad de contaminantes"
     answers:
     - isCorrect: 1
-      answer: Rana Platanera.
+      answer: Fabricas industriales.
     - isCorrect: 0
-      answer: Rana Cururu.
+      answer: Hogares.
     - isCorrect: 0
-      answer: Rana Australiana.
+      answer: "Veh\xEDculos."
   - answerSprite: {fileID: 21300000, guid: b059e9c71908ecc48b430629a8db2978, type: 3}
     answerType: 1
-    question: "El mono tit\xED, es mayormente conocido por\u2026"
+    question: "Cu\xE1les de los siguientes son fuentes alternativas de energ\xEDa"
     answers:
     - isCorrect: 1
-      answer: "Piel de cara negra y pelo gris\xE1ceo."
+      answer: "E\xF3lica, h\xEDdrica, solar."
     - isCorrect: 0
-      answer: Piel de cara negra y pelo oscuro.
+      answer: Nuclear, solar, auditiva.
     - isCorrect: 0
-      answer: "Pelo y ojos gris\xE1ceo."
-  - answerSprite: {fileID: 21300000, guid: 32c6d0826df1b294197bb8362f91a761, type: 3}
+      answer: Represas, molinos, tractores.
+  - answerSprite: {fileID: 21300000, guid: c7dacb13d1358e449bcb29a9647e5392, type: 3}
     answerType: 2
-    question: "El mayor de los felinos americanos, habitante de nuestra regi\xF3n
-      y de coloraci\xF3n amarilla rojiza, es conocido c\xF3mo\u2026"
+    question: "La arawana es un pez de agua dulce con gran capacidad para saltar sabes
+      cu\xE1nto puede saltar?"
     answers:
     - isCorrect: 1
-      answer: Jaguar o tigre mariposo.
+      answer: 2 metros.
     - isCorrect: 0
-      answer: "Le\xF3n."
+      answer: 10cm.
     - isCorrect: 0
-      answer: Cheetah.
+      answer: 120cm.
   - answerSprite: {fileID: 21300000, guid: 9dbd4ff58ec5a0f4886c729286d9f690, type: 3}
     answerType: 0
-    question: "El Cachicamo o armadillo, es un mam\xEDfero que pertenece a la familia
-      de\u2026"
+    question: "Cuando es el d\xEDa mundial del medio ambiente"
     answers:
     - isCorrect: 1
-      answer: Osos hormigueros y perezosos.
+      answer: 5 de junio.
     - isCorrect: 0
-      answer: Ornitorrinco y garza.
+      answer: 2 de agosto.
     - isCorrect: 0
-      answer: "Zamuro y G\xFCio."
+      answer: 16 de noviembre.
+  - answerSprite: {fileID: 21300000, guid: 9dbd4ff58ec5a0f4886c729286d9f690, type: 3}
+    answerType: 1
+    question: "Cu\xE1l es la empresa que suministra la energ\xEDa en tu municipio?"
+    answers:
+    - isCorrect: 1
+      answer: Electrovichada  S.A E.S.P.
+    - isCorrect: 0
+      answer: Empresas varias del Vichada.
+    - isCorrect: 0
+      answer: "Servicios p\xFAblicos del Vichada."
+  - answerSprite: {fileID: 21300000, guid: c7dacb13d1358e449bcb29a9647e5392, type: 3}
+    answerType: 2
+    question: "Cu\xE1l es la importancia de un material biodegradable"
+    answers:
+    - isCorrect: 1
+      answer: Este puede reintegrarse nuevamente al suelo sin afectar a los seres
+        vivos.
+    - isCorrect: 0
+      answer: Este material no se puede reutilizar.
+    - isCorrect: 0
+      answer: Ayuda a las plantas a crecer.
+  - answerSprite: {fileID: 21300000, guid: e5748210d4c29e94790edca836542e03, type: 3}
+    answerType: 0
+    question: Que pude hacer con el papel que le sobre
+    answers:
+    - isCorrect: 1
+      answer: Reciclarlo.
+    - isCorrect: 0
+      answer: Guardarlo.
+    - isCorrect: 0
+      answer: Botarlo.
+  - answerSprite: {fileID: 21300000, guid: 8d1bb0d1853646e4588d0020bb7df5c5, type: 3}
+    answerType: 1
+    question: "El coleo es el deporte aut\xF3ctono llanero en \xE9l  jinete  demuestra:"
+    answers:
+    - isCorrect: 1
+      answer: Su valor, fortaleza, habilidad.
+    - isCorrect: 0
+      answer: El caballo y el toro.
+    - isCorrect: 0
+      answer: La velocidad y el toro.
+  - answerSprite: {fileID: 21300000, guid: 8a9973ade68327f4ea707158dd16d8f3, type: 3}
+    answerType: 2
+    question: "El festival insignia del municipio de Santa Rosal\xEDa hace referencia
+      a la fauna de la Orinoquia  el animal que lo simboliza es:"
+    answers:
+    - isCorrect: 1
+      answer: El cachicamo.
+    - isCorrect: 0
+      answer: Una garza.
+    - isCorrect: 0
+      answer: Una iguana.
+  - answerSprite: {fileID: 21300000, guid: 696a41c462796b649a7afa061b384f7c, type: 3}
+    answerType: 0
+    question: 'El festival insignia del municipio de Cumaribo hace referencia a la
+      flora de la Orinoquia  la palma que lo simboliza  es:'
+    answers:
+    - isCorrect: 1
+      answer: La palma de cumare.
+    - isCorrect: 0
+      answer: La palma de moriche.
+    - isCorrect: 0
+      answer: La palma real.
+  - answerSprite: {fileID: 21300000, guid: 02555613b81d3d542aae666046f1d474, type: 3}
+    answerType: 1
+    question: "El festival insignia del municipio de Puerto Carre\xF1o hace referencia
+      a la cultura llanera y se simboliza por:"
+    answers:
+    - isCorrect: 1
+      answer: El baile del joropo y el coleo.
+    - isCorrect: 0
+      answer: Carrera de caballos.
+    - isCorrect: 0
+      answer: La pesca.
+  - answerSprite: {fileID: 21300000, guid: 32c6d0826df1b294197bb8362f91a761, type: 3}
+    answerType: 2
+    question: "El festival insignia del municipio de la Primavera hace referencia
+      a la fauna de la Orinoquia su s\xEDmbolo es:"
+    answers:
+    - isCorrect: 1
+      answer: El curito.
+    - isCorrect: 0
+      answer: "El pav\xF3n."
+    - isCorrect: 0
+      answer: "El gab\xE1n ."
+  - answerSprite: {fileID: 21300000, guid: b059e9c71908ecc48b430629a8db2978, type: 3}
+    answerType: 0
+    question: "El pez estrella  del rio Bita  que fue declarado insignia por la Alcald\xEDa
+      de Puerto Carre\xF1o y se proh\xEDbe matar esta especie es:"
+    answers:
+    - isCorrect: 1
+      answer: "El pav\xF3n."
+    - isCorrect: 0
+      answer: El bocachico.
+    - isCorrect: 0
+      answer: La cachama.
+  - answerSprite: {fileID: 21300000, guid: dfb223d8a07a85c49bcf0f7de51bfecc, type: 3}
+    answerType: 1
+    question: "\xC1rboles nativos que se encuentran en el departamento de Vichada"
+    answers:
+    - isCorrect: 1
+      answer: "Saladillo, pil\xF3n, congrio."
+    - isCorrect: 0
+      answer: "Mango, guan\xE1bana, guayaba."
+    - isCorrect: 0
+      answer: Matarraton, ceiba, caucho.
+  - answerSprite: {fileID: 21300000, guid: 696a41c462796b649a7afa061b384f7c, type: 3}
+    answerType: 2
+    question: El rio Bita se enmarca en un proyecto de rio protegido
+    answers:
+    - isCorrect: 1
+      answer: Por ser un santuario de flora y fauna.
+    - isCorrect: 0
+      answer: "Por estar cerca de Puerto Carre\xF1o."
+    - isCorrect: 0
+      answer: Por ser navegable.
+  - answerSprite: {fileID: 21300000, guid: b059e9c71908ecc48b430629a8db2978, type: 3}
+    answerType: 0
+    question: De los siguientes animales cuales pertenecen a la fauna silvestre del
+      departamento de Vichada.
+    answers:
+    - isCorrect: 1
+      answer: "Venado, chig\xFCiro, guacamaya."
+    - isCorrect: 0
+      answer: Caballo, chivo, perro.
+    - isCorrect: 0
+      answer: "Oso polar, ping\xFCinos, focas."

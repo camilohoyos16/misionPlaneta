@@ -60,14 +60,27 @@ public class EnergyUIManager : MonoBehaviour {
 		StartCoroutine (DoDayTransition (i));
 	}
 
+	public AudioSource dayAndNight;
+	public AudioClip day;
+	public AudioClip night;
+
 	IEnumerator DoDayTransition(bool i/*0 is day to night - 1 night to day*/)
 	{
 		float timer = 0;
 		float currentAlpha = 0;
 		Color tempColor = background.color;
+		if (i) {
+			dayAndNight.clip = day;
+			dayAndNight.Play ();
+		} else {
+			dayAndNight.clip = night;
+			dayAndNight.Play ();
+		}
+
 		while (timer < transitionTime) {
 			if (i) {
 				currentAlpha = Mathf.Lerp (minAlphaValue, 1, timer / transitionTime);
+
 			} else {
 				currentAlpha = Mathf.Lerp (1, minAlphaValue, timer / transitionTime);
 			}
@@ -117,19 +130,22 @@ public class EnergyUIManager : MonoBehaviour {
 		}
 	}
 
+	public GameObject nextLevel;
+	public GameObject playAgain;
+
 	private void GameOver()
 	{
 		gameOver.SetActive (true);
 
-		if (EnergyGameManager.amountOfLightTurnOff <= level1 || EnergyGameManager.amountOfLightTurnOff >= 0) {
-			gameOverText.text = string.Format ("Lograste apagar {0} luces, muy pocas, no has ahorrado suficiente energía para ayudar al planeta, ¡inténtalo de nuevo!", EnergyGameManager.amountOfLightTurnOff);
-		}
-
-		if (EnergyGameManager.amountOfLightTurnOff > level2 && EnergyGameManager.amountOfLightTurnOff <= level3) {
+		if (EnergyGameManager.amountOfLightTurnOff >= level2 && EnergyGameManager.amountOfLightTurnOff <= level3) {
+			nextLevel.SetActive (false);
+			playAgain.SetActive (true);
 			gameOverText.text = string.Format ("Lo hiciste muy bien, {0} luces, pero puedes hacerlo mejor, completa la carga de la batería para utilizar la energía cuando sea realmente necesario, ¡inténtalo de nuevo!", EnergyGameManager.amountOfLightTurnOff);
 		}
 
 		if (EnergyGameManager.amountOfLightTurnOff > level3) {
+			nextLevel.SetActive (true);
+			playAgain.SetActive (false);
 			gameOverText.text = string.Format ("Increíble, has hecho un trabajo perfecto, {0} luces, no solo ayudaste el planeta, sino que ahorraste dinero en los servicios de energía", EnergyGameManager.amountOfLightTurnOff);
 		}
 	}

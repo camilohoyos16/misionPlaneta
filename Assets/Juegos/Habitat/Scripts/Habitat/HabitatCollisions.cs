@@ -9,6 +9,8 @@ public class HabitatCollisions : MonoBehaviour {
 	private AnimalInformation animalTarget;
 	private Animator c_animator;
 	private RandomShake shake;
+	private bool isChecking=false;
+	public bool isCorrectAndAnimating=false;
 
 	void Awake()
 	{
@@ -24,19 +26,25 @@ public class HabitatCollisions : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (isChecking && isColliding && !animalTarget.gameObject.GetComponent<AnimalsMovement> ().isBeClicking) {
+			isChecking = false;
+			CheckCollision ();
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D target)
 	{
-		animalTarget = target.GetComponent<AnimalInformation> ();
-		if (animalTarget != null) {
-			isColliding = true;
-			shake.enabled = false;
-			c_animator.SetBool ("hover", true);
-		}
-		else{
-			isColliding = false;
+		if (!isCorrectAndAnimating) {
+			animalTarget = target.GetComponent<AnimalInformation> ();
+			if (animalTarget != null) {
+				isColliding = true;
+				shake.enabled = false;
+				c_animator.SetBool ("hover", true);
+				isChecking = true;
+			}
+			else{
+				isColliding = false;
+			}
 		}
 	}
 
@@ -50,12 +58,27 @@ public class HabitatCollisions : MonoBehaviour {
 		}
 	}
 
-	void OnMouseUp()
+	void CheckCollision()
 	{
 		if (isColliding) {
-			if (HabitatGameManager.CheckAnimalHabitat (animalTarget.animalType, data.habitatType)) {
-				c_animator.SetTrigger("correctAnimal");
+			if (HabitatGameManager.instance.CheckAnimalHabitat (animalTarget.animalType, data.habitatType, c_animator)) {
+				isCorrectAndAnimating = true;
+			} else {
+				animalTarget.gameObject.GetComponent<AnimalsMovement> ().MoveToStartPosition ();
 			}
 		}
+	}
+
+	public void StartAnimation()
+	{
+		HabitatGameManager.instance.SetActiveAllObjects (false, animalTarget.gameObject);
+	}
+
+	public void EndAnimation()
+	{
+		HabitatGameManager.instance.SetActiveAllObjects (true);
+		animalTarget.gameObject.SetActive (false);
+		isCorrectAndAnimating = false;
+		HabitatGameManager.instance.PlusScore ();
 	}
 }
