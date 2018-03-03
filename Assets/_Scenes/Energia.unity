@@ -4340,7 +4340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyUI: {fileID: 1409057662}
-  gameTime: 5
+  gameTime: 60
   isPlaying: 0
   apagabombillo: {fileID: 1126723403}
   lights: []

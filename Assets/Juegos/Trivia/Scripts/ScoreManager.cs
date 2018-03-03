@@ -95,6 +95,9 @@ public class ScoreManager : MonoBehaviour {
 		finalImage.SetActive(true);
 	}
 
+	public GameObject nextLevel;
+	public GameObject PlayAgain;
+
 	private void RankedPlayer()
 	{
 		buttonsFinal.SetActive (true);
@@ -107,12 +110,16 @@ public class ScoreManager : MonoBehaviour {
 		case 5:
 		case 6:
 			ActiveEndGame (abucheo, 0.7f, level1);
+			PlayAgain.SetActive (true);
+			nextLevel.SetActive (false);
 			break;
 		case 7:
 		case 8:
 		case 9:
 		case 10:
 			ActiveEndGame (felicitaciones, 0.7f, level4);
+			PlayAgain.SetActive (false);
+			nextLevel.SetActive (true);
 			break;
 		}
 	}

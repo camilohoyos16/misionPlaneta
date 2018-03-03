@@ -2458,7 +2458,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1980026439
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2843,7 +2843,7 @@ MonoBehaviour:
   bad: {fileID: 8300000, guid: e6c99a33d11b6f94082dbecb04894b3b, type: 3}
   gameOver: {fileID: 1980026438}
   tutorial: {fileID: 2003125512}
-  spokenTutorial: {fileID: 0}
+  spokenTutorial: {fileID: 1913511414}
 --- !u!1 &2040333165
 GameObject:
   m_ObjectHideFlags: 0
