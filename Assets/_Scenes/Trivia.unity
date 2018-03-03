@@ -1249,18 +1249,16 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 14
     m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Responde correctamente las preguntas de la trivia y descubre en qu\xE9
-    nivel de ahorro est\xE1s, qu\xE9 tanto sabes de tu comunidad, y c\xF3mo puedes
-    ayudar. \r\n\r\nEn este nivel encontrar\xE1s 3 tipos de preguntas, sobre el medio
-    ambiente, fauna y flora de colombia, y ahorro de energ\xEDa, \xBFest\xE1s listo
-    para ponerte a prueba? \xA1empieza la trivia!"
+  m_Text: "Responde correctamente las preguntas de la trivia y descubre qu\xE9 tanto
+    sabes sobre la fauna en Vichada, adem\xE1s, ayuda aclasificar correctamente los
+    desechos para avanzar al siguiente nivel, \xA1empieza la trivia!"
 --- !u!222 &711761951
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3001,7 +2999,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cc1117c5a68911642ac5735f73b909f6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 41eae102ed51aea4292a75b285100128, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3189,8 +3187,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -216.4, y: 87.2}
-  m_SizeDelta: {x: 134.94, y: 134.94}
+  m_AnchoredPosition: {x: 187.1, y: 91.3}
+  m_SizeDelta: {x: 109.13, y: 109.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1485145769
 MonoBehaviour:

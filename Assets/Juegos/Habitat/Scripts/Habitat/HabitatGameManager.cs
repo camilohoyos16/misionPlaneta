@@ -121,8 +121,10 @@ public class HabitatGameManager : MonoBehaviour {
 	}
 
 	public GameObject tutorial;
+	public AudioSource spokenTutorial;
 	public void DissapearTutorial()
 	{
+		spokenTutorial.Stop ();
 		tutorial.SetActive (false);
 	}
 

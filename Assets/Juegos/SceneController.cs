@@ -20,6 +20,12 @@ public class SceneController : MonoBehaviour {
 		}
 	}
 
+	public void ExitGame()
+	{
+		Application.Quit();
+
+	}
+
 	void OnEnable()
 	{
 		onLoadAdd += TurnOffCamera;
